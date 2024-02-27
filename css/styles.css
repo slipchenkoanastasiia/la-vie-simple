@@ -69,3 +69,55 @@ body {
     padding: 0 14px;
     margin: auto;
   }
+  
+ /* Стилі для слайдера */
+ .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+ /* Стилі для бігаючої стрічки */
+ .horizontal-line {
+  width: 100%;
+  height: 50px;
+  background-color: var(--main-brand-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center; 
+}
+
+.moving-text-container {
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  animation: moveText 30s linear infinite; 
+}
+
+.moving-text-container::before {
+  content: "\00a0"; 
+  margin-right: 50px; 
+}
+
+.moving-text {
+  display: inline-block;
+  color: var(--bg-color);
+  margin-right: 100px;
+}
+
+@keyframes moveText {
+  0% { transform: translateX(100%); } 
+  100% { transform: translateX(-100%); } 
+}
