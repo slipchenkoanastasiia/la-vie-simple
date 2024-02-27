@@ -10,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
 
 </head>
@@ -65,47 +66,30 @@
       </header> 
 
       <main>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/hero-plisse-2x.jpg" alt="plisse"></div>
+            <div class="swiper-slide"><img src="" alt="new-collection"></div>
+            <div class="swiper-slide"><img src="./img/hero-blouse-2x.jpg" alt="blouse"></div>
+            <div class="swiper-slide"><img src="./img/hero-shine-2x.jpg" alt="shine-collection"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        
+        
+        </section>
+
         <section>
-          <div>
-            <div>
-              <div>
-                <img 
-                     src="./img/hero-plisse-2x.jpg" 
-                     srcset="./img/hero-plisse-1x.jpg 1x, ./img/hero-plisse-2x.jpg 2x" 
-                     width="1248" 
-                     height="648" 
-                     alt="plisse">
-              </div>
-              <!-- <div>
-                <img 
-                     src="./img/hero-nc2-2x.jpg" 
-                     srcset="./img/hero-nc2-1x.jpg 1x, ./img/hero-nc2-2x.jpg 2x" 
-                     width="1248" 
-                     height="648" 
-                     alt="new-collection">
-              </div>
-              <div>
-                <img 
-                     src="./img/hero-blouse-2x.jpg" 
-                     srcset="./img/hero-blouse-1x.jpg 1x, ./img/hero-blouse-2x.jpg 2x" 
-                     width="1248" 
-                     height="648" 
-                     alt="blouse">
-              </div>
-              <div>
-                <img 
-                     src="./img/hero-shine-2x.jpg" 
-                     srcset="./img/hero-shine-1x.jpg 1x, ./img/hero-shine-2x.jpg 2x" 
-                     width="1248" 
-                     height="648" 
-                     alt="shine-collection">
-              </div> -->
+          <div class="horizontal-line">
+            <div class="moving-text-container">
+                <div class="moving-text">     Spring Collection     </div>
             </div>
           </div>
         </section>
-      </main> 
-
+      
+    </main>
 
       <script src="./js/swiper-bundle.js"></script>
+      <script src="./js/strip_animation.js"></script>
 </body>
 </html>
