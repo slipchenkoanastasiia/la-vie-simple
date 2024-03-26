@@ -121,3 +121,76 @@ body {
   0% { transform: translateX(100%); } 
   100% { transform: translateX(-100%); } 
 }
+
+/* Стилі для максі та міді */
+.image-section {
+  width: 1248px;
+  margin: 0 auto;
+  overflow: hidden; 
+}
+
+.image-container {
+  float: left;
+  margin-right: 14px;
+}
+
+.image-container:last-child {
+  margin-right: 0; 
+}
+
+.image-container img {
+  width: 100%; 
+  height: auto;
+}
+
+.image-caption {
+  text-align: center;
+  margin-top: 10px; 
+  font-size: 14px;
+}
+
+/* Стилі для образів */
+.image-carousel {
+  width: 1248px;
+  padding: 0 14px; 
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-wrapper {
+  display: flex;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  margin-right: 26px; 
+}
+
+.carousel-slide img {
+  width: 389px;
+  height: 488px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-control.prev {
+  left: 0;
+}
+
+.carousel-control.next {
+  right: 0;
+}
