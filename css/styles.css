@@ -1,7 +1,7 @@
 :root {
     --primary-font: 'DM Sans', sans-serif;
     --logo-font: 'Bodoni Moda', serif;
-    --text-font: 'Dancing Script', cursive;
+    --text-font: 'Satisfy', cursive;
     --bg-color: #FFFFFF;
     --main-brand-color: #0F0965;
     --main-text-color: #242424;
@@ -9,8 +9,7 @@
     --dark-gray-color: #999999;
 }
 
-body {
-    font-family: var(--primary-font);
+  body {
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -72,72 +71,128 @@ body {
   }
   
  /* Стилі для слайдера */
-
  .swiper-container {
   width: 100%;
   height: 100%;
 }
 
 .swiper-slide {
-  width: 100%;
-  height: 100%;
   position: relative;
 }
 
 .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .slide-caption-container {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
 }
 
-.slide-caption {
-  position: absolute;
+.swiper-slide:nth-child(1) .slide-caption-container {
+  right: 10%;
+  white-space: nowrap;
 }
 
-.caption1 {
+.swiper-slide:nth-child(1) .caption1 {
   white-space: nowrap;
   font-size: 50px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
+  line-height: 1.1; 
+  letter-spacing: 0.5px;
+  color: var(--main-text-color);
 }
 
-.caption1_1 {
+.swiper-slide:nth-child(1) .caption1_1 {
   white-space: nowrap;
   padding-top: 0px;
   font-size: 17px;
-  margin-top: -15px;
+  text-align: right; 
+  line-height: 1.1; 
+  letter-spacing: 0.3px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
 }
 
-.caption2, .caption2_2 {
-  display: inline-block; 
+.swiper-slide:nth-child(2) .slide-caption-container {
+  left: 10%;
+  right: auto; 
+  transform: translateY(-50%);
+  text-align: left; 
+}
+
+.swiper-slide:nth-child(2) .caption2 {
   white-space: nowrap;
-  font-size: 40px;
-  margin-bottom: 2px;
+  font-size: 50px;
+  line-height: 1.1; 
+  letter-spacing: 0.3px;
+  color: var(--bg-color);
   font-family: var(--text-font);
 }
 
-.caption2 {
-  margin-left: -180px;
-  color: var(--bg-color);
+.swiper-slide:nth-child(3) .slide-caption-container {
+  left: 50%; 
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-.swiper-slide .slide-caption .caption3 {
+.swiper-slide:nth-child(3) .caption3 {
+  white-space: nowrap;
   font-size: 50px;
+  line-height: 1.1; 
+  letter-spacing: 0.3px;
+  color: var(--main-text-color);
   text-align: center;
-  margin: 0 auto; /* це може вирівняти текст по центру */
-  padding: 0; /* видаліть будь-які зайві відступи */
+  margin-bottom: 5px;
+  font-family: var(--primary-font);
 }
 
+.swiper-slide:nth-child(3) .caption3_1 {
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 1.1; 
+  letter-spacing: 0.3px;
+  color: var(--main-text-color);
+  text-align: center; 
+  font-family: var(--primary-font);
+}
 
+.swiper-slide:nth-child(4) .slide-caption-container {
+  left: 50%;
+  right: auto;
+  top: 60%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
 
-/* Додаткові стилі для інших слайдів */
+.swiper-slide:nth-child(4) .caption4 {
+  white-space: nowrap;
+  font-size: 24px;
+  margin-bottom: 5px;
+  line-height: 1.1; 
+  letter-spacing: 0.5px;
+  color: var(--main-text-color);
+  font-family: var(--text-font); 
+}
 
+.swiper-slide:nth-child(5) .slide-caption-container {
+  left: 10%;
+  right: auto;
+  transform: translateY(-50%);
+  text-align: left;
+}
+
+.swiper-slide:nth-child(5) .caption5 {
+  white-space: nowrap;
+  font-size: 30px;
+  line-height: 1.1; 
+  letter-spacing: 0.3px;
+  color: var(--main-text-color);
+  font-family: var(--text-font); 
+}
 
  /* Стилі для бігаючої стрічки */
  .horizontal-line {
