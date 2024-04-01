@@ -1,7 +1,7 @@
 :root {
     --primary-font: 'DM Sans', sans-serif;
     --logo-font: 'Bodoni Moda', serif;
-    --text-font: 'Satisfy', cursive;
+    --text-font: 'Great Vibes', cursive;
     --bg-color: #FFFFFF;
     --main-brand-color: #0F0965;
     --main-text-color: #242424;
@@ -141,41 +141,41 @@
 
 .swiper-slide:nth-child(3) .caption3 {
   white-space: nowrap;
-  font-size: 50px;
+  font-size: 100px;
   line-height: 1.1; 
   letter-spacing: 0.3px;
-  color: var(--main-text-color);
+  color: var(--bg-color);
   text-align: center;
   margin-bottom: 5px;
   font-family: var(--primary-font);
+  font-weight: bold; 
 }
 
 .swiper-slide:nth-child(3) .caption3_1 {
   white-space: nowrap;
   font-size: 17px;
-  line-height: 1.1; 
+  line-height: 0.5; 
   letter-spacing: 0.3px;
-  color: var(--main-text-color);
+  color: var(--bg-color);
   text-align: center; 
   font-family: var(--primary-font);
 }
 
 .swiper-slide:nth-child(4) .slide-caption-container {
-  left: 50%;
+  top: 70%; 
+  transform: translateY(-50%);
+  left: 10%;
   right: auto;
-  top: 60%;
-  transform: translateX(-50%);
-  white-space: nowrap;
+  text-align: left;
 }
 
 .swiper-slide:nth-child(4) .caption4 {
   white-space: nowrap;
-  font-size: 24px;
-  margin-bottom: 5px;
+  font-size: 30px;
   line-height: 1.1; 
-  letter-spacing: 0.5px;
-  color: var(--main-text-color);
-  font-family: var(--text-font); 
+  letter-spacing: 0.3px;
+  color: var(--bg-color);
+  font-family: var(--text-font);
 }
 
 .swiper-slide:nth-child(5) .slide-caption-container {
@@ -187,11 +187,22 @@
 
 .swiper-slide:nth-child(5) .caption5 {
   white-space: nowrap;
-  font-size: 30px;
+  font-size: 50px;
   line-height: 1.1; 
   letter-spacing: 0.3px;
   color: var(--main-text-color);
   font-family: var(--text-font); 
+  overflow-wrap: break-word;
+}
+
+.swiper-slide:nth-child(5) .caption5_1 {
+  white-space: nowrap;
+  font-size: 17px;
+  text-align: right; 
+  line-height: 0.5; 
+  letter-spacing: 0.3px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
 }
 
  /* Стилі для бігаючої стрічки */
@@ -207,7 +218,7 @@
 
 .moving-text-container {
   white-space: nowrap;
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   width: 100%;
   animation: moveText 30s linear infinite; 
@@ -221,13 +232,84 @@
 .moving-text {
   display: inline-block;
   color: var(--bg-color);
-  margin-right: 100px;
+  margin-right: 100px; 
+  line-height: 2; 
 }
 
 @keyframes moveText {
   0% { transform: translateX(100%); } 
   100% { transform: translateX(-100%); } 
 }
+
+ /* Стилі для новинок */
+ .section {
+  padding: 0 14px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.option-section {
+  display: flex;
+  justify-content: space-between; /* Розподіл елементів по горизонталі */
+  align-items: center; 
+  margin-bottom: 10px;/* Вирівнювання елементів по вертикалі */
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.card-list li {
+  flex-basis: calc((100% - 14px) / 5 - 14px); /* Розрахована ширина карточки з урахуванням відстані між ними */
+  margin-bottom: 20px; /* Відстань між рядками карток */
+}
+
+.image-container {
+  width: 100%;
+  height: 378px; /* Висота картки */
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.text-container {
+  text-align: left; 
+}
+
+.title {
+  margin-top: 8px; /* Зменшення відстані між заголовком та підписом */
+  margin-bottom: 2px; /* Зменшення відстані між заголовком та верхньою межею картки */
+}
+
+.caption {
+  margin-top: 2px; /* Зменшення відстані між підписом та нижньою межею картки */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Стилі для максі та міді */
 .image-section {
