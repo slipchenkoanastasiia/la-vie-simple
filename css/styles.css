@@ -244,8 +244,86 @@
  /* Стилі для новинок */
  .section {
   padding: 0 14px;
-  margin-top: 20px;
+  margin-top: 60px;
   margin-bottom: 10px;
+}
+
+.section-name {
+  font-size: 24px;
+  text-align: right; 
+  line-height: 0.5; 
+  letter-spacing: 0.9px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-weight: normal; /* Додано для встановлення тексту нежирним */
+}
+
+.button-name {
+  font-size: 14px;
+  text-align: right; 
+  line-height: 1.1; 
+  letter-spacing: 0.3px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  padding: 17px 23px 17px 23px;
+  background-color: var(--bg-color); 
+  border: 1px solid var(--main-text-color); 
+}
+
+.button-name:hover {
+  background-color: var(--main-brand-color);
+  color: var(--bg-color);
+  cursor: pointer;
+}
+
+.title {
+  font-size: 12px;
+  text-align: left; 
+  line-height: 1.1; 
+  letter-spacing: 0.2px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-weight: normal;
+}
+
+.caption {
+  font-size: 12px;
+  text-align: left; 
+  line-height: 1.1; 
+  letter-spacing: 0.2px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  padding-top: 7px;
+  font-weight: bold;
+}
+
+.svg-icon {
+  position: absolute;
+  top: 5px; /* відступ зверху */
+  right: 5px; /* відступ справа */
+  fill: none;
+  stroke: var(--bg-color);
+  stroke-width: 1px; /* Задайте ширину бордюру */
+}
+
+.svg-icon:hover {
+  cursor: pointer;
+}
+
+.white-fill {
+  fill: white !important;
+  stroke: none !important; /* Видаляє внутрішні бордери */
+}
+
+
+
+
+.image-container {
+  position: relative; /* Додано позиціонування relative */
+  width: 100%;
+  height: 378px; /* Висота картки */
+  overflow: hidden;
+  margin-bottom: 16px;
 }
 
 .option-section {
@@ -270,29 +348,10 @@
   margin-bottom: 20px; /* Відстань між рядками карток */
 }
 
-.image-container {
-  width: 100%;
-  height: 378px; /* Висота картки */
-  overflow: hidden;
-}
 
-.image-container img {
-  width: 100%;
-  height: 100%;
-}
 
-.text-container {
-  text-align: left; 
-}
 
-.title {
-  margin-top: 8px; /* Зменшення відстані між заголовком та підписом */
-  margin-bottom: 2px; /* Зменшення відстані між заголовком та верхньою межею картки */
-}
 
-.caption {
-  margin-top: 2px; /* Зменшення відстані між підписом та нижньою межею картки */
-}
 
 
 
