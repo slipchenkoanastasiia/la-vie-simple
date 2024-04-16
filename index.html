@@ -225,7 +225,6 @@
           </div> 
         </section>
         
-        
         <section class="section-popular">
           <div class="option-section">
             <h2 class="section-name">ПОПУЛЯРНОЕ</h2>
@@ -303,37 +302,67 @@
             </ul>
         </section>
 
-        <section class="image-carousel">
-          <h2 class="hidden">Образы на неделю</h2>
+        <section class="section-carousel">
+          <h2 class="visually-hidden">Образы на неделю</h2>
           <div class="carousel-wrapper">
               <div class="carousel-inner">
                   <div class="carousel-slide">
-                      <img src="зображення1.jpg" alt="Зображення 1">
-                      <div class="carousel-caption">Текст для першого зображення</div>
+                      <img src="./img/Obrazy/obrazy-1-2x.jpg" alt="Зображення 1" width="389" height="488">
+                      <p class="overlay-carousel">ОБРАЗЫ НА НЕДЕЛЮ</p>
+                      <ul class="overlay-carousel-2">
+                        <li>Пиджак в классическом стиле</li>
+                        <li>Кофта песочного цвета</li>
+                        <li>Юбка макси плиссе шоколад</li>
+                      </ul>
                   </div>
                   <div class="carousel-slide">
-                      <img src="зображення2.jpg" alt="Зображення 2">
-                      <p class="overlay">Текст для 2 зображення</p>
+                      <img src="./img/Obrazy/obrazy-2-2x.jpg" alt="Зображення 2" width="389" height="488">
+                      <p class="overlay-carousel-1">день 2</p>
+                      <ul class="overlay-carousel-2">
+                        <li>Кофта голубого цвета</li>
+                        <li>Юбка макси плиссе голубая</li>
+                      </ul>
                   </div>
                   <div class="carousel-slide">
-                      <img src="зображення3.jpg" alt="Зображення 3">
-                      <p class="overlay">Текст для 3 зображення</p>
+                      <img src="./img/Obrazy/obrazy-3-2x.jpg" alt="Зображення 3" width="389" height="488">
+                      <p class="overlay-carousel-1">день 3</p>
+                      <ul class="overlay-carousel-2">
+                        <li>Блуза с коротким акцентным рукавом</li>
+                        <li>Классический костюм-двойка</li>
+                      </ul>
                   </div>
                   <div class="carousel-slide">
-                      <img src="зображення4.jpg" alt="Зображення 4">
-                      <p class="overlay">Текст для 4 зображення</p>
+                    <img src="./img/Obrazy/obrazy-4-2x.jpg" alt="Зображення 4" width="389" height="488">
+                    <p class="overlay-carousel-1">день 4</p>
+                    <ul class="overlay-carousel-2">
+                      <li>Кофта белого цвета</li>
+                      <li>Классический костюм-двойка</li>
+                    </ul>
                   </div>
                   <div class="carousel-slide">
-                      <img src="зображення5.jpg" alt="Зображення 5">
-                      <p class="overlay">Текст для 5 зображення</p>
+                    <img src="./img/Obrazy/obrazy-5-2x.jpg" alt="Зображення 5" width="389" height="488">
+                    <p class="overlay-carousel-1">день 5</p>
+                    <ul class="overlay-carousel-2">
+                      <li>Кофта песочного цвета</li>
+                      <li>Классический пиджак красный</li>
+                      <li>Юбка макси плиссе красная</li>
+                    </ul>
                   </div>
                   <div class="carousel-slide">
-                      <img src="зображення6.jpg" alt="Зображення 6">
-                      <p class="overlay">Текст для 6 зображення</p>
+                    <img src="./img/Obrazy/obrazy-6-2x.jpg" alt="Зображення 6" width="389" height="488">
+                    <p class="overlay-carousel-1">день 6</p>
+                    <ul class="overlay-carousel-2">
+                      <li>Кофта беж с коротким рукавом</li>
+                      <li>Юбка французской длины</li>
+                    </ul>
                   </div>
                   <div class="carousel-slide">
-                      <img src="зображення7.jpg" alt="Зображення 7">
-                      <p class="overlay">Текст для 7 зображення</p>
+                    <img src="./img/Obrazy/obrazy-7-2x.jpg" alt="Зображення 7" width="389" height="488">
+                    <p class="overlay-carousel-1">день 7</p>
+                    <ul class="overlay-carousel-2">
+                      <li>Блуза белая с коротким рукавом</li>
+                      <li>Юбка миди плиссе темно-синяя</li>
+                    </ul>
                   </div>
               </div>
           </div>
@@ -341,27 +370,90 @@
           <button class="carousel-control next">&#10095;</button>
       </section>
       
-      <section>
-        <div>
-          <h2>Final sale</h2>
-          <ul>
+      <section class="section-fs">
+        <div class="option-section">
+          <h2 class="section-name">FINAL SALE</h2>
+          <div class="button-container">
+            <button class="button-name">просмотреть все</button>
+          </div>
+        </div>
+        <div class="card-section">
+          <ul class="card-list">
             <li>
-              <div>
-                <img/>
-                <p></p>
+              <div class="image-container">
+                <svg class="discount-circle" width="50" height="50">
+                  <circle cx="25" cy="25" r="25" fill="var(--main-brand-color)"/>
+                  <text x="25" y="30" text-anchor="middle" font-size="14" fill="black">25%</text>
+                </svg>
+                
+                <svg class="svg-icon" width="24" height="24" onclick="toggleColor(event)">
+                  <use href="./img/icons.svg#icon-heart"></use>
+              </svg>
+      
+                <img src="./img/Sale/sale-1-2x.jpg" alt="Image 1" width="236" height="378">
+                <p class="overlay">42/44 46/48 50/52</p>
               </div>
-              <div>
-                <h3></h3>
-                <p></p>
+              <div class="text-container">
+                <h3 class="title">Трикотаж</h3>
+                <div class="price-container">
+                    <p class="price">24 000 тг</p>
+                    <p class="new-price">18 000 тг</p>
+                </div>
+            </div>
+            </li>
+            <li>
+              <div class="image-container">
+                <svg class="svg-icon" width="24" height="24" onclick="toggleColor(event)">
+                  <use href="./img/icons.svg#icon-heart"></use>
+              </svg>
+                <img src="./img/Sale/sale-2-2x.jpg" alt="Image 2" width="236" height="378">
+                <p class="overlay">36 38 40 42</p>
+              </div>
+              <div class="text-container ">
+                <h3 class="title">Юбка макси</h3>
+                <p class="caption">40 000 тг</p>
+              </div>
+            </li>
+            <li>
+              <div class="image-container">
+                <svg class="svg-icon" width="24" height="24" onclick="toggleColor(event)">
+                  <use href="./img/icons.svg#icon-heart"></use>
+              </svg>
+                <img src="./img/Sale/sale-3-2x.jpg" alt="Image 3" width="236" height="378">
+                <p class="overlay">36 38 40 42</p>
+              </div>
+              <div class="text-container">
+                <h3 class="title">Юбка макси</h3>
+                <p class="caption">24 000 тг</p>
+              </div>
+            </li>
+            <li>
+              <div class="image-container">
+                <svg class="svg-icon" width="24" height="24" onclick="toggleColor(event)">
+                  <use href="./img/icons.svg#icon-heart"></use>
+              </svg>
+                <img src="./img/Sale/sale-4-2x.jpg" alt="Image 4" width="236" height="378">
+                <p class="overlay">36 38 40 42</p>
+              </div>
+              <div class="text-container">
+                <h3 class="title">Юбка макси</h3>
+                <p class="caption">28 000 тг</p>
+              </div>
+            </li>
+            <li>
+              <div class="image-container">
+                <svg class="svg-icon" width="24" height="24" onclick="toggleColor(event)">
+                  <use href="./img/icons.svg#icon-heart"></use>
+              </svg>
+                <img src="./img/Sale/sale-5-2x.jpg" alt="Image 5" width="236" height="378">
+                <p class="overlay">42/44 46/48 50/52</p>
+              </div>
+              <div class="text-container">
+                <h3 class="title">Блуза</h3>
+                <p class="caption">15 000 тг</p>
               </div>
             </li>
           </ul>
-        </div>
-        <div>
-          <button>
-            Просмотреть все скидки
-          </button>
-        </div>
       </section>
       
     </main>
