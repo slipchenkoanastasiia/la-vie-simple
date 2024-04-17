@@ -426,8 +426,14 @@
 
 .carousel-wrapper {
   display: flex;
-  overflow-x: auto; 
+  overflow-x: auto;
+  overflow-y: hidden; 
   -webkit-overflow-scrolling: touch; 
+  scroll-behavior: smooth;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none; 
 }
 
 .carousel-inner {
