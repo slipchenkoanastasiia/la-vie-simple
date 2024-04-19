@@ -32,15 +32,22 @@
     margin-bottom: 0;
   }
   
-  .list {
-    list-style-type: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
+  a {
+    text-decoration: none;
   }
 
-  .link {
+  ul,
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.link {
     text-decoration: none;
+  }
+  .list {
+    list-style: none;
   }
   
   img {
@@ -70,6 +77,67 @@
     margin: auto;
   }
   
+ /* Стилі для хедера */
+ .header .container {
+  display: flex;
+  height: 82px;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  margin: auto;
+  gap: 30px;
+  margin-right: auto;
+  position: relative;
+}
+.nav_item {
+  margin-right: auto;
+}
+.nav_link {
+  font-size: 16px;
+  color: #2e2f42;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.logo-container {
+  display: flex; /* Вирівнювання елементів логотипу та тексту */
+  align-items: center; /* Вирівнювання вертикально */
+  margin-right: 40px; /* Додана відстань між LaVie та Каталог */
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.icons svg {
+  width: 19px; /* Задайте ширину SVG таку ж, як ширину іконок */
+  height: 19px; /* Задайте висоту SVG таку ж, як висоту іконок */
+}
+
+.basket {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
  /* Стилі для слайдера */
  .swiper-container {
   width: 100%;
