@@ -673,8 +673,11 @@
  .footer {
   background-color: var(--main-brand-color);
   color: var(--bg-color);
-  
+  width: 100%;
+  position: relative;
+  left: 0;
   margin-top: 90px;
+  overflow: hidden;
 }
 
 .footer .container {
@@ -682,6 +685,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  padding: 0 14px;
 }
 
 .footer-top,
@@ -745,17 +749,28 @@
   margin-left: auto;
 }
 
+.site-info {
+  margin-top: 20px;
+  margin-left: 0 auto;
+  margin-bottom: 30px;
+}
+
 .footer-bottom {
-  flex: 1;
   display: flex;
-  justify-content: flex-end; /* Прижимає секцію до правого краю контейнера */
-  gap: 24px;
-  margin-right: 24px;
-  margin-top: -20px; /* Зменшує відстань вгору */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px; 
+  justify-content: flex-end;
+  margin-right: 14px; 
+  align-self: flex-start; 
 }
 
 .footer-menu {
-  width: 100px; /* Змініть ширину відповідно до ваших потреб */
+  width: auto; 
+}
+
+.footer-menu:first-child {
+  margin-right: 30px;
 }
 
 .footer-menu ul {
@@ -765,12 +780,4 @@
 
 .footer-menu ul li {
   margin-bottom: 5px;
-}
-
-
-
-
-.site-info {
-  margin-left: 50px;
-  margin-top: 20px;
 }
