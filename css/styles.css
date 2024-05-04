@@ -201,8 +201,7 @@ display: block;
 .slide-caption-container {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
 }
 
 .slide1 .slide-caption-container {
@@ -217,10 +216,22 @@ display: block;
   letter-spacing: 0.5px;
   color: var(--bg-color);
   text-transform: uppercase;
-  text-align: left;
   font-weight: 700;
   font-family: var(--primary-font);
 }
+
+.slide1 .caption1 {
+  white-space: nowrap;
+  font-size: 70px;
+  line-height: 1.1; 
+  letter-spacing: 0.5px;
+  color: var(--bg-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--primary-font);
+}
+
+  
 
 .slide2 .slide-caption-container {
   left: 10%;
@@ -256,7 +267,7 @@ display: block;
   color: var(--bg-color);
   text-align: center;
   margin-bottom: 5px;
-  font-weight: 600;
+  font-weight: 550;
   font-family: var(--primary-font);
 }
 
@@ -294,7 +305,7 @@ display: block;
   letter-spacing: 0.3px;
   color: var(--bg-color);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 550;
   font-family: var(--primary-font);
 }
 
