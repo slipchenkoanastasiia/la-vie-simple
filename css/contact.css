@@ -1,0 +1,96 @@
+.container-contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-left, .contact-right {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-name .c-name, .contact-name .c-cont {
+    font-weight: bold;
+    color: var(--main-brand-color);
+}
+
+.contact-text {
+    color: var(--dark-gray-color);
+}
+
+.contact-info .contact-tel {
+    font-size: 1.2em;
+    color: var(--main-text-color);
+}
+
+.contact-social {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-social li a {
+    display: block;
+}
+
+.map h2 {
+    margin-bottom: 10px;
+}
+
+#map-container {
+    border: 1px solid var(--light-gray-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.feedback-form h2 {
+    margin-bottom: 10px;
+}
+
+.feedback-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.feedback-form input, .feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--light-gray-color);
+    border-radius: 5px;
+}
+
+.feedback-form button {
+    background-color: var(--main-brand-color);
+    color: var(--bg-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #333;
+}
+
+.stores h2 {
+    margin-bottom: 10px;
+}
+
+.store h3 {
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+
+.store p {
+    color: var(--dark-gray-color);
+    margin-bottom: 5px;
+}
