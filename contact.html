@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaVie</title>
+    <title>Контакты</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
               <li><a class="nav-menu link" href="#">Spring Collection</a></li>
               <li><a class="nav-menu link" href="#">Новинки</a></li>
               <li><a class="nav-menu link" href="#">Sale</a></li>
-              <li><a class="nav-menu link" href="#">О нас</a></li>
+              <li><a class="nav-menu link" href="#">Контакты</a></li>
             </ul>
           </nav>
           <div class="icons">
@@ -49,53 +49,59 @@
 
       <main>
         <div class="container-contact container">
-            <div class="contact-left">
-                <div class="contact">
-                    <div class="contact-name">
-                        <p class="c-name">La Vie</p>
-                        <p class="c-cont">Контакты</p>
-                    </div>
-                    <p class="contact-text">Нужна помощь в выборе товара, размера или оплате? 
-                        Звоните или пишите нам. Мы с радостью вам поможем.</p>
-                    <div class="contact-info">
-                        <p class="contact-tel">+7774 621 3224</p>
-                        <ul class="contact-social">
-                            <li><a href="https://www.facebook.com/" target="_blank"><svg class="icon-facebook" width="21" height="21"><use href="./img/icons.svg#icon-facebook"></use></svg></a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank"><svg class="icon-instagram" width="21" height="21"><use href="./img/icons.svg#icon-instagram"></use></svg></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="map">
-                    <div id="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46513.82571510551!2d76.76066362167968!3d43.22806720000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369000d752e3f%3A0xd5b5f8d974682691!2sUsh%20Sunkar!5e0!3m2!1suk!2sua!4v1716582299283!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-right">
+          <div class="contact-left">
+              <div class="contact">
+                  <div class="contact-name">
+                      <p class="c-name">La Vie</p>
+                      <p class="c-cont">Контакты</p>
+                  </div>
+                  <p class="contact-text">Нужна помощь в выборе товара, размера или оплате? 
+                      Звоните или пишите нам. Мы с радостью вам поможем.</p>
+                  <div class="contact-info">
+                      <p class="contact-tel">+7774 621 3224</p>
+                      <ul class="contact-social">
+                          <li><a href="https://www.facebook.com/" target="_blank"><svg class="icon-facebook" width="19" height="19"><use href="./img/icons.svg#icon-facebook"></use></svg></a></li>
+                          <li><a href="https://www.instagram.com/" target="_blank"><svg class="icon-instagram" width="19" height="19"><use href="./img/icons.svg#icon-instagram"></use></svg></a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="map">
+                  <div id="map-container">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46513.82571510551!2d76.76066362167968!3d43.22806720000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369000d752e3f%3A0xd5b5f8d974682691!2sUsh%20Sunkar!5e0!3m2!1suk!2sua!4v1716582299283!5m2!1suk!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+              </div>
+          </div>
+          <div class="contact-right">
               <div class="feedback-form">
-                <h2 class="feedback-name">Обратная связь</h2>
-                <form action="#">
-                    <input type="text" id="name" name="name" placeholder="Имя" required>
-                                    
-                    <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
-                                    
-                    <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
-                                    
-                    <button type="submit">Отправить</button>
-                </form>
-            </div>
-                <div class="stores">
-                    <h2>Бутик La Vie</h2>
-                    <div class="store">
-                        <h3>Алматы / ТРЦ "Ush Sunqar"</h3>
-                        <p>мкр. Аксай 5, дом 25</p>
-                        <p>2 этаж, бутик В-10</p>
-                        <p>каждый день 10:00–22:00 / +7774 621 3224</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </main>
+                  <h2 class="feedback-name">Обратная связь</h2>
+                  <form action="#">
+                      <div class="name-phone-container">
+                          <input type="text" id="name" name="name" placeholder="Имя" required>
+                          <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                      </div>
+                      <div class="message-container">
+                          <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
+                          <button type="submit" class="send-button">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                                  <path d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M19 12l-6.4 6.4 1.6 1.6 8-8-8-8-1.6 1.6L19 12z" fill="var(--main-brand-color)"/>
+                              </svg>
+                          </button>
+                      </div>
+                  </form>
+              </div>
+              <div class="stores">
+                  <h2>Бутик La Vie</h2>
+                  <div class="store">
+                      <h3>Алматы / ТРЦ "Ush Sunqar"</h3>
+                      <p>мкр. Аксай 5, дом 25</p>
+                      <p>2 этаж, бутик В-10</p>
+                      <p>каждый день 10:00–22:00 / +7774 621 3224</p>
+                  </div>
+              </div>
+          </div>
+      </div>      
+    </main>
 
       <footer class="footer">
         <div class="container">

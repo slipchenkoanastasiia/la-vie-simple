@@ -138,10 +138,14 @@
   font-family: var(--primary-font);
 }
 
+.nav-menu:hover {
+  color: var(--main-brand-color);
+}
+
 .icons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 10px; 
   margin-left: auto;
   justify-content: flex-end; 
 }
