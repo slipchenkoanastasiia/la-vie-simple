@@ -1,0 +1,168 @@
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; /* змінив margin-bottom на margin-top */
+}
+
+.left-content h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.right-content .sort {
+    display: flex;
+    align-items: center;
+    color: #777;
+}
+
+.right-content .sort label {
+    margin-right: 10px;
+}
+
+.right-content .sort select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Заголовок "Юбки максі" */
+.filters {
+    width: calc(25% - 20px); /* Змінив ширину на 25% */
+    margin-right: 20px; /* Додав margin-right для відділення від списку продуктів */
+    float: left; /* Додав float: left; щоб фільтри були ліворуч */
+}
+
+.filters h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Фільтри */
+.filters form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.filters form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Кнопки фільтрів */
+.filters form button {
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filters form button:hover {
+    background-color: #333;
+}
+
+/* Список продуктів */
+.product-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-row {
+    display: flex;
+    gap: 20px;
+}
+
+.product-item {
+    flex: 1 0 calc(33.33% - 20px);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.product-item img {
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.product-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+    color: #333;
+}
+
+.product-item p {
+    margin: 10px;
+    color: #777;
+}
+
+.product-item button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0 0 4px 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-item button:hover {
+    background-color: #333;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Додаємо flex-wrap */
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.page-number {
+    cursor: pointer;
+}
+
+.viewed-products {
+    text-align: center;
+}
+
+
+#show-more-btn {
+    width: auto; /* Змінив на auto */
+    padding: 10px 30px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 auto; /* Центруємо кнопку у контейнері */
+    display: block; /* Додаємо display: block для коректного відображення margin */
+}
+
+
+#show-more-btn:hover {
+    background-color: #333;
+}
