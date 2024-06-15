@@ -51,21 +51,26 @@
     <div class="menu-filters container">
         <div class="header-content">
             <div class="left-content">
-                <h1>СПІДНИЦІ</h1>
+                <h1>Юбки</h1>
             </div>
             <div class="right-content">
                 <div class="sort">
-                    <label for="sort">Сортувати:</label>
-                    <select id="sort" name="sort">
-                        <option value="default">за замовчуванням</option>
-                        <option value="price">за ціною</option>
-                        <option value="popularity">за популярністю</option>
-                    </select>
+                    <label for="sort">Сортировать:</label>
+                    <div class="custom-select">
+                        <select id="sort" name="sort">
+                            <option value="default">по умолчанию</option>
+                            <option value="price">по цене</option>
+                            <option value="popularity">по популярности</option>
+                        </select>
+                        <svg width="17" height="17" class="arrow-icon">
+                            <use href="./img/icons.svg#icon-arrow-down"></use>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
-         <div class="content">
-           <div class="filters">
+        <div class="content">
+            <div class="filters">
                 <h2>Юбки макси</h2>
                 <form>
                     <div class="filter-group">
@@ -76,7 +81,7 @@
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label for="size">Розмір</label>
+                        <label for="size">Размер</label>
                         <select id="size" name="size">
                             <option value="one-size">ONE SIZE</option>
                             <option value="xs">XS</option>
@@ -86,49 +91,47 @@
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label for="color">Колір</label>
+                        <label for="color">Цвет</label>
                         <select id="color" name="color">
-                            <option value="white">Білий</option>
-                            <option value="beige">Бежевий</option>
-                            <option value="black">Чорний</option>
+                            <option value="white">Белый</option>
+                            <option value="beige">Беж</option>
+                            <option value="black">Черный</option>
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label for="discount">Знижка</label>
+                        <label for="discount">Скидка</label>
                         <select id="discount" name="discount">
-                            <option value="discount">Зі знижкою</option>
-                            <option value="none">Без знижки</option>
+                            <option value="discount">Со скидкой</option>
+                            <option value="none">Без скидки</option>
                         </select>
                     </div>
                     <div class="filter-group">
                         <label for="price">Вартість</label>
                         <div class="price-from">
-                            <label for="minPrice">від
-                                 </label>
+                            <label for="minPrice">від</label>
                             <input type="number" id="minPrice" value="399" oninput="updatePrice()">
                             <svg width="17" height="17">
                                 <use href="./img/icons.svg#icon-arrow-up"></use>
                             </svg>
                         </div>
                         <div class="price-to">
-                            <label for="maxPrice">до
-                            </label>
+                            <label for="maxPrice">до</label>
                             <input type="number" id="maxPrice" value="2650" oninput="updatePrice()">
                             <svg width="17" height="17">
                                 <use href="./img/icons.svg#icon-arrow-down"></use>
                             </svg>
-                        </div>             
+                        </div>
                         <div class="price-buttons">
                             <button type="button" onclick="setPrice(0, 500)">до 500 грн</button>
                             <button type="button" onclick="setPrice(1000, 1500)">1000 - 1500 грн</button>
                             <button type="button" onclick="setPrice(500, 1000)">500 - 1000 грн</button>
                             <button type="button" onclick="setPrice(1500, Infinity)">від 1500 грн</button>
                         </div>
-                    </div>                    
+                    </div>
                     <button type="submit">Применить</button>
                 </form>
             </div>
-            
+    
             <div class="product-list-container">
                 <div class="product-list">
                     <div class="product-row">
@@ -136,19 +139,16 @@
                             <img src="path-to-image1.jpg" alt="Спідниця 1">
                             <h3>Спідниця 1</h3>
                             <p>1890 грн</p>
-                            <button>Додати до кошика</button>
                         </div>
                         <div class="product-item">
                             <img src="path-to-image2.jpg" alt="Спідниця 2">
                             <h3>Спідниця 2</h3>
                             <p>2200 грн</p>
-                            <button>Додати до кошика</button>
                         </div>
                         <div class="product-item">
                             <img src="path-to-image3.jpg" alt="Спідниця 3">
                             <h3>Спідниця 3</h3>
                             <p>2200 грн</p>
-                            <button>Додати до кошика</button>
                         </div>
                     </div>
                     <!-- Додайте інші ряди товарів тут -->
@@ -162,7 +162,8 @@
             </div>
             <div class="viewed-products">Переглянуто 9 товарів з 54</div>
         </div>
-    </div> 
+    </div>
+    
 </main>
 
 <footer class="footer">

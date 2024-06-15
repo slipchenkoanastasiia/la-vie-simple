@@ -2,43 +2,98 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px; /* змінив margin-bottom на margin-top */
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .left-content h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+    font-size: 16px; 
+    line-height: 1.1; 
+    letter-spacing: 0.3px;
+    color: var(--dark-gray-color);
+    font-family: var(--primary-font); 
+    font-weight: 400;
 }
 
 .right-content .sort {
     display: flex;
     align-items: center;
-    color: #777;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-family: var(--primary-font);
 }
 
 .right-content .sort label {
-    margin-right: 10px;
+    margin-right: 20px; 
+}
+
+.right-content .sort .custom-select {
+    position: relative;
+    display: inline-block;
+    width: 200px;
 }
 
 .right-content .sort select {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 10px; 
+    width: 100%;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-/* Заголовок "Юбки максі" */
+.right-content .sort .arrow-icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+select {
+    font-size: 16px;
+    line-height: 0.7;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 400;
+    font-family: var(--primary-font);
+}
+
+option {
+    font-size: 16px;
+    line-height: 0.7;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 400;
+    font-family: var(--primary-font);
+    background-color: var(--bg-color);
+}
+
+option:hover {
+    background-color: var(--bg-color);
+}
+
 .filters {
-    width: calc(25% - 20px); /* Змінив ширину на 25% */
-    margin-right: 20px; /* Додав margin-right для відділення від списку продуктів */
-    float: left; /* Додав float: left; щоб фільтри були ліворуч */
+    width: calc(25% - 20px); 
+    margin-right: 20px; 
+    float: left; 
 }
 
 .filters h2 {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-family: var(--primary-font);
     margin-bottom: 20px;
-    color: #333;
+    text-transform: uppercase;
 }
 
 .filter-group {
@@ -49,21 +104,22 @@
     display: block;
     margin-bottom: 5px;
     font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
     font-weight: 600;
-    color: #333;
+    font-family: var(--primary-font);
 }
 
-/* Випадаючий список */
 .filter-group select {
     width: 100%;
-    padding: 8px 10px;
-
-    background-color: #fff;
+    padding: 12px 14px;
+    background-color: var(--bg-color);
     font-size: 14px;
-    color: #333;
+    color: var(--main-text-color);
     cursor: pointer;
     appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Іконка стрілки */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 16px 16px;
@@ -73,65 +129,107 @@
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
-    width: 100%; /* Змінив ширину на 100% */
+    width: 100%; 
 }
 
 .price-from, .price-to {
-    flex: 1;
     display: flex;
-    align-items: center;
+    align-items: center; 
+    margin-bottom: 10px; 
 }
 
 .price-from label, .price-to label {
     margin-right: 5px;
     font-size: 14px;
-    width: auto; /* Встановлюємо фіксовану ширину для лейблів */
-    text-align: right; /* Вирівнюємо текст по правому краю */
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 400;
+    font-family: var(--primary-font);
+    text-align: right; 
+    display: flex; 
+    align-items: center; 
 }
 
 .price-from input, .price-to input {
     flex: 1;
     padding: 8px;
     font-size: 14px;
-    border: none; /* Додаємо стиль без бордера */
-    outline: none; /* Додаємо стиль без обводу */
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 400;
+    border: none; 
+    outline: none; 
+    box-sizing: border-box; 
+    vertical-align: middle; 
 }
 
 .price-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    width: 100%; /* Змінив ширину на 100% */
+    width: 100%; 
 }
 
 .price-buttons button {
     padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
+    background-color: var(--bg-color);
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .price-buttons button:hover {
-    background-color: #e0e0e0;
+    background-color: var(--bg-color);
 }
 
-/* Кнопки фільтрів */
 .filters form button {
     padding: 10px 15px;
-    background-color: #000;
-    color: #fff;
-    border: none;
+    background-color: var(--bg-color);
+    color: var(--main-text-color);
+    border: 1px solid #000;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .filters form button:hover {
-    background-color: #333;
+    background-color: var(--main-text-color);
+    color: var(--bg-color);
 }
+
+.filters form button:active {
+    background-color: var(--main-text-color);
+    color: var(--bg-color);
+}
+
+.filters form button[type="submit"] {
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 600;
+    background-color: var(--main-text-color);
+    color: var(--bg-color);
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filters form button[type="submit"]:hover {
+    background-color: var(--bg-color);
+    color: var(--main-text-color);
+}
+
+.filters form button[type="submit"]:active {
+    background-color: var(--bg-color);
+    color: var(--main-text-color);
+}
+
 
 /* Список продуктів */
 .product-list-container {
@@ -225,3 +323,15 @@
 #show-more-btn:hover {
     background-color: #333;
 }
+
+/* Прибираємо стрілки з input[type="number"] для всіх браузерів */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-animation: textfield;
+}
+

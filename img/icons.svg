@@ -46,10 +46,10 @@
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M15.467 2.133l-13.867 13.867 13.867 13.867"></path>
 </symbol>
 <symbol id="icon-arrow-up" viewBox="0 0 32 18">
-    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.4286" d="M29.714 15.714l-13.714-13.714-13.714 13.714"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.4286" d="M29.714 15.714l-13.714-13.714-13.714 13.714"></path>
 </symbol>
 <symbol id="icon-arrow-down" viewBox="0 0 32 18">
-    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.4286" d="M29.714 2.286l-13.714 13.714-13.714-13.714"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.4286" d="M29.714 2.286l-13.714 13.714-13.714-13.714"></path>
 </symbol>
 </defs>
 </svg>
