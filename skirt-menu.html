@@ -109,23 +109,23 @@
                         <label for="price">Вартість</label>
                         <div class="price-from">
                             <label for="minPrice">від</label>
-                            <input type="number" id="minPrice" value="399" oninput="updatePrice()">
+                            <input type="number" id="minPrice" value="10000" oninput="updatePrice()">
                             <svg width="17" height="17">
                                 <use href="./img/icons.svg#icon-arrow-up"></use>
                             </svg>
                         </div>
                         <div class="price-to">
                             <label for="maxPrice">до</label>
-                            <input type="number" id="maxPrice" value="2650" oninput="updatePrice()">
+                            <input type="number" id="maxPrice" value="40000" oninput="updatePrice()">
                             <svg width="17" height="17">
                                 <use href="./img/icons.svg#icon-arrow-down"></use>
                             </svg>
                         </div>
                         <div class="price-buttons">
-                            <button type="button" onclick="setPrice(0, 500)">до 500 грн</button>
-                            <button type="button" onclick="setPrice(1000, 1500)">1000 - 1500 грн</button>
-                            <button type="button" onclick="setPrice(500, 1000)">500 - 1000 грн</button>
-                            <button type="button" onclick="setPrice(1500, Infinity)">від 1500 грн</button>
+                            <button type="button" onclick="setPrice(0, 10000)">до 10 000 тг</button>
+                            <button type="button" onclick="setPrice(10000, 15000)">10 000 - 15 000 тг</button>
+                            <button type="button" onclick="setPrice(15000, 25000)">15 000 - 20 000 тг</button>
+                            <button type="button" onclick="setPrice(25000, Infinity)">от 25 000 тг</button>
                         </div>
                     </div>
                     <button type="submit">Применить</button>
@@ -136,31 +136,59 @@
                 <div class="product-list">
                     <div class="product-row">
                         <div class="product-item">
-                            <img src="path-to-image1.jpg" alt="Спідниця 1">
-                            <h3>Спідниця 1</h3>
-                            <p>1890 грн</p>
+                            <img src="./img/Product/product-10-2x.jpg" alt="Спідниця 1" width="236" height="378">
+                            <h3 class="title-row">Спідниця 1</h3>
+                            <p class="caption-row">1890 грн</p>
                         </div>
                         <div class="product-item">
-                            <img src="path-to-image2.jpg" alt="Спідниця 2">
-                            <h3>Спідниця 2</h3>
-                            <p>2200 грн</p>
+                            <img src="./img/Product/product-4-2x.jpg" alt="Спідниця 2" width="236" height="378">
+                            <h3 class="title-row">Спідниця 2</h3>
+                            <p class="caption-row">2200 грн</p>
                         </div>
                         <div class="product-item">
-                            <img src="path-to-image3.jpg" alt="Спідниця 3">
-                            <h3>Спідниця 3</h3>
-                            <p>2200 грн</p>
+                            <img src="./img/Product/product-5-2x.jpg" alt="Спідниця 3" width="236" height="378">
+                            <h3 class="title-row">Спідниця 3</h3>
+                            <p class="caption-row">2200 грн</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="./img/Product/product-1-2x.jpg" alt="Спідниця 3" width="236" height="378">
+                            <h3 class="title-row">Спідниця 3</h3>
+                            <p class="caption-row">2200 грн</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="./img/Product/product-17-2x.jpg" alt="Спідниця 3" width="236" height="378">
+                            <h3 class="title-row">Спідниця 3</h3>
+                            <p class="caption-row">2200 грн</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="./img/Product/product-9-2x.jpg" alt="Спідниця 3" width="236" height="378">
+                            <h3 class="title-row">Спідниця 3</h3>
+                            <p class="caption-row">2200 грн</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="./img/Product/product-10-2x.jpg" alt="Спідниця 3" width="236" height="378">
+                            <h3 class="title-row">Спідниця 3</h3>
+                            <p class="caption-row">2200 грн</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="./img/Product/product-10-2x.jpg" alt="Спідниця 3" width="236" height="378">
+                            <h3 class="title-row">Спідниця 3</h3>
+                            <p class="caption-row">2200 грн</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="./img/Product/product-10-2x.jpg" alt="Спідниця 3" width="236" height="378">
+                            <h3 class="title-row">Спідниця 3</h3>
+                            <p class="caption-row">2200 грн</p>
                         </div>
                     </div>
-                    <!-- Додайте інші ряди товарів тут -->
                 </div>
                 <div class="pagination">
                     <span class="page-number">1</span>
                     <span class="page-number">2</span>
-                    <!-- Додайте інші номери сторінок тут -->
+                    <span class="page-number">3</span>
                 </div>
-                <button id="show-more-btn">Показати ще товари</button>
+                <button id="show-more-btn">показать еще товары</button>
             </div>
-            <div class="viewed-products">Переглянуто 9 товарів з 54</div>
         </div>
     </div>
     
