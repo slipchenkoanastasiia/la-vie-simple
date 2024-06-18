@@ -23,18 +23,52 @@
   <header class="header">
     <div class="container">
       <nav class="page-nav">
-        <div class="logo-container"> 
+        <div class="logo-container">
           <img src="./img/logo-heder.jpg" alt="Логотип LaVie" width="31" height="31" class="logo">
           <a href="./index.html" class="logo-name link">La Vie</a>
         </div>
         <ul class="nav-list list">
-          <li><a class="nav-menu link" href="#">Каталог</a></li>
-          <li><a class="nav-menu link" href="#">Spring Collection</a></li>
-          <li><a class="nav-menu link" href="#">Новинки</a></li>
-          <li><a class="nav-menu link" href="#">Sale</a></li>
-          <li><a class="nav-menu link" href="./contact.html">Контакты</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-menu link" href="#">Каталог</a>
+            <ul class="dropdown-content">
+              <li class="dropdown-item">
+                <a href="#">Юбки</a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="#">Макси</a></li>
+                  <li><a href="#">Миди</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">Блузы</a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="#">Классические</a></li>
+                  <li><a href="#">На торжество</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">Кофты</a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="#">С коротким рукавом</a></li>
+                  <li><a href="#">Кардигани</a></li>
+                  <li><a href="#">Свитера</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">Пальто</a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="#">Зимние</a></li>
+                  <li><a href="#">Осенние</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-menu link" href="#">Spring Collection</a></li>
+          <li class="nav-item"><a class="nav-menu link" href="#">Новинки</a></li>
+          <li class="nav-item"><a class="nav-menu link" href="#">Sale</a></li>
+          <li class="nav-item"><a class="nav-menu link" href="./contact.html">Контакти</a></li>
         </ul>
       </nav>
+      
       <div class="icons">
         <ul class="nav-icons list">
           <li class="link"><svg width="17" height="17"><use href="./img/icons.svg#icon-whatsapp"></use></svg></li>

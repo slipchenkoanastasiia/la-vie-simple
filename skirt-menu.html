@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaVie</title>
+    <title>skirt-menu</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,19 +21,27 @@
 
   <header class="header">
     <div class="container">
-      <nav class="page-nav">
-        <div class="logo-container"> 
-          <img src="./img/logo-heder.jpg" alt="Логотип LaVie" width="31" height="31" class="logo">
-          <a href="./index.html" class="logo-name link">La Vie</a>
-        </div>
-        <ul class="nav-list list">
-          <li><a class="nav-menu link" href="#">Каталог</a></li>
-          <li><a class="nav-menu link" href="#">Spring Collection</a></li>
-          <li><a class="nav-menu link" href="#">Новинки</a></li>
-          <li><a class="nav-menu link" href="#">Sale</a></li>
-          <li><a class="nav-menu link" href="./contact.html">Контакты</a></li>
-        </ul>
-      </nav>
+        <nav class="page-nav">
+            <div class="logo-container"> 
+              <img src="./img/logo-heder.jpg" alt="Логотип LaVie" width="31" height="31" class="logo">
+              <a href="./index.html" class="logo-name link">La Vie</a>
+            </div>
+            <ul class="nav-list list">
+              <li class="dropdown">
+                <a class="nav-menu link" href="#">Каталог</a>
+                <ul class="dropdown-content">
+                  <li><a href="#">Підкатегорія 1</a></li>
+                  <li><a href="#">Підкатегорія 2</a></li>
+                  <li><a href="#">Підкатегорія 3</a></li>
+                </ul>
+              </li>
+              <li><a class="nav-menu link" href="#">Spring Collection</a></li>
+              <li><a class="nav-menu link" href="#">Новинки</a></li>
+              <li><a class="nav-menu link" href="#">Sale</a></li>
+              <li><a class="nav-menu link" href="./contact.html">Контакти</a></li>
+            </ul>
+          </nav>
+          
       <div class="icons">
         <ul class="nav-icons list">
           <li class="link"><svg width="17" height="17"><use href="./img/icons.svg#icon-whatsapp"></use></svg></li>
