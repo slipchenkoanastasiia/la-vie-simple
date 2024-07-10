@@ -1,0 +1,52 @@
+.sale-container {
+    display: flex;
+    justify-content: flex-start; /* Вирівняти по лівому краю */
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.sale-text {
+    flex: 3;
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0.3px;
+    color: var(--dark-gray-color);
+    font-family: var(--primary-font);
+    font-weight: 400;
+    margin-right: 14px;
+    text-align: right;
+    margin-top: -90px;
+}
+
+.sale-image {
+    flex: 8;
+    display: flex;
+    justify-content: flex-start; /* Вирівняти по лівому краю */
+}
+
+.sale-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.sale-firstext {
+    font-size: 70px;
+    line-height: 1.1;
+    letter-spacing: 3px;
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: -10px;
+}
+
+.sale-secondtext {
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-family: var(--primary-font);
+    font-weight: 400;
+    margin-top: 15px;
+}
