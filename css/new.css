@@ -1,4 +1,4 @@
-.sale-container {
+.new-container {
     display: flex;
     align-items: center;
     margin-top: 20px;
@@ -7,7 +7,7 @@
     margin-left: 110px;
 }
 
-.sale-text {
+.new-text {
     position: absolute;
     z-index: 2;
     /* left: 130px; */
@@ -22,20 +22,21 @@
     top: 60px;
 }
 
-.sale-image {
+.new-image {
     flex: 1;
     display: flex;
     justify-content: flex-end;
     padding-right: 0;
 }
 
-.sale-image img {
+.new-image img {
     max-width: 75%;
     height: auto;
     object-fit: cover;
+
 }
 
-.sale-firstext {
+.new-firstext {
     font-size: 70px;
     line-height: 1.1;
     letter-spacing: 3px;
@@ -45,7 +46,7 @@
     margin-bottom: -10px;
 }
 
-.sale-secondtext {
+.new-secondtext {
     font-size: 16px;
     line-height: 1.1;
     letter-spacing: 0.3px;
