@@ -1,0 +1,64 @@
+.question {
+    display: flex;
+}
+
+.question-section, .question-form {
+    padding: 20px;
+}
+.question-section {
+    width: 70%;
+    background-color: #f0f0f0;
+}
+.question-form {
+    width: 30%;
+    background-color: #fff;
+}
+.question-form h3 {
+    margin-top: 0;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-group button:hover {
+    background-color: #444;
+}
+.question-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.question-section ul p {
+    margin: 5px 0 15px;
+}
+.question-section ul::before {
+    content: "• ";
+    color: #000;
+    font-weight: bold;
+}
+.question-form div svg {
+    margin-right: 10px;
+}
