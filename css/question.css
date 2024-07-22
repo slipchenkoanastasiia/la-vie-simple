@@ -1,28 +1,79 @@
 .question {
     display: flex;
+    gap: 24px;
+    margin-top: 20px;
 }
 
-.question-section, .question-form {
-    padding: 20px;
-}
-.question-section {
+.question-section {  
     width: 70%;
-    background-color: #f0f0f0;
 }
+
+.question-section ul {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-family: var(--primary-font);
+    margin-bottom: 20px;
+    list-style-type: none !important; /* Прибираємо крапки у списку */
+    padding: 0 !important; /* Прибираємо відступ */
+}
+
+.question-section ul li {
+    margin: 40px 0; /* Збільшено відстань між елементами списку */
+}
+
+.question-p {
+    font-size: 21px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-family: var(--primary-font);
+    margin-bottom: 20px; /* Зменшено відстань для лінії */
+    position: relative; /* Додаємо для позиціонування псевдоелемента */
+}
+
+.question-p::after {
+    content: ""; /* Порожній контент для створення псевдоелемента */
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Відстань від тексту до лінії */
+    width: 100%;
+    border-top: 1px solid #000; /* Тонка горизонтальна лінія */
+}
+
+.question-ulp {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 300;
+    font-family: var(--primary-font);
+    margin-bottom: 20px;
+    text-decoration: none; 
+}
+
 .question-form {
     width: 30%;
     background-color: #fff;
 }
+
 .question-form h3 {
     margin-top: 0;
 }
+
 .form-group {
     margin-bottom: 15px;
 }
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
 }
+
 .form-group input, 
 .form-group textarea {
     width: 100%;
@@ -31,10 +82,12 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 .form-group textarea {
     resize: vertical;
     height: 100px;
 }
+
 .form-group button {
     width: 100%;
     padding: 10px;
@@ -44,21 +97,11 @@
     border-radius: 4px;
     cursor: pointer;
 }
+
 .form-group button:hover {
     background-color: #444;
 }
-.question-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-.question-section ul p {
-    margin: 5px 0 15px;
-}
-.question-section ul::before {
-    content: "• ";
-    color: #000;
-    font-weight: bold;
-}
+
 .question-form div svg {
     margin-right: 10px;
 }
