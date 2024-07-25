@@ -115,34 +115,32 @@
   
     <section class="question-form">
         <div>
-            <p>Нужна помощь?</p>
-            <p>Наш продавец-консультант с радостью Вам поможет в выборе товара</p>
+            <p class="first-form">Нужна помощь?</p>
+            <p class="second-form">Наш продавец-консультант с радостью Вам поможет в выборе товара</p>
         </div>
-        <div>
-            <svg width="17" height="17">
-                <use href="./img/icons.svg#icon-whatsapp"></use>
-            </svg>
-            <p>+7774 621 3224</p>
-        </div>
+        <div class="contact">
+          <svg width="17" height="17">
+              <use href="./img/icons.svg#icon-whatsapp"></use>
+          </svg>
+          <p>+7774 621 3224</p>
+      </div>
+      
         <div>
             <h3>Задать вопрос</h3>
-            <form>
-                <div class="form-group">
-                    <label for="name">Имя</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="question">Ваш вопрос</label>
-                    <textarea id="question" name="question" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Отправить</button>
-                </div>
-            </form>
+            <form class="feedback-form">
+              <div class="form-group name-email-container">
+                  <input type="text" id="name" name="name" placeholder="Имя" required>
+                  <input type="email" id="email" name="email" placeholder="E-mail" required>
+              </div>
+              <div class="form-group">
+                  <textarea id="question" name="question" placeholder="Ваш вопрос" required></textarea>
+              </div>
+              <div class="form-group">
+                  <button type="submit" class="feedback-button">
+                      Отправить
+                  </button>
+              </div>
+          </form>          
         </div>
     </section>
 </div>

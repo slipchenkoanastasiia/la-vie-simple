@@ -61,47 +61,132 @@
     background-color: #fff;
 }
 
+.first-form {
+    font-size: 21px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-family: var(--primary-font);
+    margin-bottom: 40px;
+}
+
+.second-form {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 300;
+    font-family: var(--primary-font);
+    margin-bottom: 20px;
+}
+
+.contact {
+    display: flex;
+    align-items: center; 
+    gap: 4px;
+    margin-bottom: 50px;
+}
+
+.contact svg {
+    display: inline-block;
+}
+
+.contact p {
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-family: var(--primary-font);
+    margin: 0;
+}
+
 .question-form h3 {
+    font-size: 21px;
+    line-height: 1;
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-weight: 400;
+    font-family: var(--primary-font);
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
+.feedback-form label {
     display: block;
     margin-bottom: 5px;
+    color: var(--main-text-color); 
 }
 
-.form-group input, 
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.feedback-form .name-email-container input[type="text"],
+.feedback-form .name-email-container input[type="email"],
+.feedback-form .name-email-container textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid var(--light-gray-color); 
+    background-color: var(--light-gray-color); 
+    color: var(--main-text-color); 
+    height: 50px; 
+    border-radius: 0; 
+}
+
+.feedback-form .name-email-container input[type="email"] {
+    color: var(--main-text-color) !important; 
+}
+
+.feedback-form .name-email-container input[type="text"]::placeholder,
+.feedback-form .name-email-container input[type="email"]::placeholder,
+.feedback-form .name-email-container textarea::placeholder {
+    font-size: 14px; 
+    line-height: 0.7; 
+    letter-spacing: 0.3px; 
+    color: var(--main-text-color); 
+    font-weight: 500; 
+    font-family: var(--primary-font); 
+}
+
+.feedback-form .form-group {
+    margin-bottom: 15px; 
+}
+
+.feedback-form .name-email-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    margin-bottom: 10px; 
+}
+
+.feedback-form .message-container {
+    position: relative;
+}
+
+.feedback-form textarea {
+    width: 100%; 
+    padding-right: 40px; 
     box-sizing: border-box;
+    border-radius: 0; 
 }
 
-.form-group textarea {
-    resize: vertical;
-    height: 100px;
+.feedback-form .feedback-button {
+    width: 100%; 
+    background-color: #ffffff; 
+    color: #000000; 
+    border: 1px solid #000000; 
+    border-radius: 0;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    font-family: var(--primary-font); 
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-.form-group button {
-    width: 100%;
-    padding: 10px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.feedback-form .feedback-button:hover {
+    background-color: #f0f0f0; 
+    color: #000000; 
 }
 
-.form-group button:hover {
-    background-color: #444;
-}
-
-.question-form div svg {
-    margin-right: 10px;
+.feedback-form .feedback-button:focus {
+    outline: none; 
 }
