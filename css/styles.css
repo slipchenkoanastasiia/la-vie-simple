@@ -35,29 +35,36 @@ p {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none; 
+  outline: none; 
+  border: none;
 }
 
-ul,
-li {
+ul, li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .link {
-  text-decoration: none;
+  text-decoration: none; 
 }
-.list {
-  list-style: none;
+
+.link a {
+  display: inline-block; 
+}
+
+.link a:focus, .link a:hover {
+  outline: none; 
+  color: inherit; 
 }
 
 img {
-  display: block;
+  display: block; 
 }
 
 .icon {
-  fill: currentColor;
+  fill: currentColor; 
 }
 
 .visually-hidden {
@@ -215,6 +222,10 @@ img {
   margin-right: 30px;
   position: relative;
   height: 20px; 
+}
+
+.custom-icon {
+color: var(--main-text-color);
 }
 
 .nav-icons::after {
