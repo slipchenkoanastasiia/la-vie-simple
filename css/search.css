@@ -58,6 +58,7 @@ h2 {
     width: 216px; 
     height: 316px; 
     border: none;
+    cursor: pointer;
 }
 
 .query-item p {

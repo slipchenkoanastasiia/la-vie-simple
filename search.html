@@ -103,23 +103,23 @@
         <h2>Популярные запросы</h2>
         <div class="popular-queries">
             <div class="query-item">
-                <img src="img/knitted-products.jpg" alt="Макси">
+                <img src="./img/Search/search-2-2x.jpg" alt="Макси">
                 <p>Макси</p>
             </div>
             <div class="query-item">
-                <img src="img/dresses.jpg" alt="Миди">
+                <img src="./img/Search/search-5-2x.jpg" alt="Миди">
                 <p>Миди</p>
             </div>
             <div class="query-item">
-                <img src="img/jeans.jpg" alt="Блузы">
+                <img src="./img/Search/search-3-2x.jpg" alt="Блузы">
                 <p>Блузы</p>
             </div>
             <div class="query-item">
-                <img src="img/classic-suits.jpg" alt="Пиджаки">
+                <img src="./img/Search/search-4-2x.jpg" alt="Пиджаки">
                 <p>Пиджаки</p>
             </div>
             <div class="query-item">
-                <img src="img/t-shirts.jpg" alt="Пальто">
+                <img src="./img/Search/search-1-2x.jpg" alt="Пальто">
                 <p>Пальто</p>
             </div>
         </div>
@@ -187,5 +187,10 @@
       </div>
     </footer> 
 
-    <script src="./js/close-btn.js"></script>
+    <script>
+      document.querySelector('.close-btn').addEventListener('click', function() {
+          window.history.back();
+      });
+  </script>
+  
 </body>
