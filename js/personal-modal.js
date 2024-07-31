@@ -1,23 +1,35 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('personal-modal.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('modalContainer').innerHTML = data;
+document.addEventListener('DOMContentLoaded', () => {
+    // Отримуємо модальне вікно
+    const loginModal = document.getElementById('loginModal');
 
-            document.querySelector('.link-icon').addEventListener('click', function(event) {
-                event.preventDefault();
-                document.getElementById('loginModal').style.display = 'block';
-            });
+    // Отримуємо елемент, який відкриває модальне вікно
+    const openModalBtn = document.querySelector('.open-login-modal');
 
-            document.querySelector('.close-btn').addEventListener('click', function() {
-                document.getElementById('loginModal').style.display = 'none';
-            });
+    // Отримуємо кнопку закриття модального вікна
+    const closeModalBtn = loginModal.querySelector('.close-btn');
 
-            document.querySelector('.toggle-password').addEventListener('click', function() {
-                const passwordInput = document.getElementById('password');
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-            });
-        })
-        .catch(error => console.error('Error loading modal:', error));
+    // Додаємо обробник події для відкриття модального вікна
+    openModalBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        loginModal.style.display = 'block';
+    });
+
+    // Додаємо обробник події для закриття модального вікна
+    closeModalBtn.addEventListener('click', () => {
+        loginModal.style.display = 'none';
+    });
+
+    // Додаємо обробник події для закриття модального вікна при натисканні поза ним
+    window.addEventListener('click', (event) => {
+        if (event.target === loginModal) {
+            loginModal.style.display = 'none';
+        }
+    });
+
+    // Додаємо обробник події для перемикання виду пароля
+    document.querySelector('.toggle-password').addEventListener('click', () => {
+        const passwordInput = document.getElementById('password');
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+    });
 });
