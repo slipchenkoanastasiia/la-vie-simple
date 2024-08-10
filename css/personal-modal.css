@@ -7,7 +7,7 @@
     width: 100%; 
     height: 100%;
     overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex; 
     align-items: center; 
     justify-content: center; 
@@ -33,10 +33,23 @@
     z-index: 10;
     height: 24px;
     width: 24px;
+    color: var(--dark-gray-color);
+}
+
+.close-btn:hover {
+color: var(--main-text-color);
 }
 
 h2 {
     text-align: center; 
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.4px;
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-family: var(--primary-font);
 }
 
 .form-group {
@@ -51,27 +64,54 @@ label {
 
 input[type="email"],
 input[type="password"] {
-    width: 100%; 
-    padding: 10px; 
-    margin: 5px 0 10px 0; 
-    display: inline-block; 
-    border: 1px solid #ccc; 
+    width: 100%;
+    padding: 15px; 
+    margin: 0 0 5px 0; 
+    display: inline-block;
+    border: 1px solid var(--light-gray-color);
     box-sizing: border-box;
+    background-color: var(--light-gray-color);
+}
+
+input::placeholder {
+    font-size: 16px;
+    text-align: left; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    color: var(--bg-color);
+    font-family: var(--primary-font);
+    font-weight: normal;
 }
 
 .toggle-password {
+    position: absolute;
+    top: 50%; 
+    right: 10px; 
+    transform: translateY(-50%); 
     background: none;
     border: none;
     cursor: pointer;
-    position: absolute; 
-    right: 10px;
-    top: 35px; 
+    z-index: 1; 
+    color: var(--bg-color);
+}
+
+.password-group input[type="password"] {
+    padding-right: 40px; 
 }
 
 .forgot-password {
-    display: block;
-    text-align: right; 
-    margin: 10px 0; 
+    text-align: right;
+    font-size: 12px; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    color: var(--dark-gray-color);
+    font-family: var(--primary-font);
+    font-weight: normal;
+    display: block; 
+    width: 100%; 
+    padding: 0; 
+    margin-top: -5px;
+    margin-bottom: 30px;
 }
 
 .login-btn,
@@ -79,38 +119,91 @@ input[type="password"] {
 .facebook-login,
 .google-login {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
+    padding: 15px; 
+    margin: 0 0 5px 0; 
     cursor: pointer; 
+    display: inline-block; 
+    border: none;
 }
 
 .login-btn {
-    background-color: #000; 
-    color: #fff; 
+    font-size: 16px;
+    text-align: center; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    color: var(--bg-color);
+    font-family: var(--primary-font);
+    font-weight: normal;
+    background-color: var(--main-text-color);
+    border: 1px solid var(--main-text-color);
+}
+
+.login-btn:hover {
+    background-color: var(--bg-color); 
+    color: var(--main-text-color); 
+    border-color: var(--main-text-color); 
 }
 
 .register-btn {
-    background-color: #fff; 
-    border: 1px solid #000; 
-    color: #000; 
+    font-size: 16px;
+    text-align: center; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    color: var(--main-text-color);
+    font-family: var(--primary-font);
+    font-weight: normal;
+    background-color: var(--bg-color);
+    border: 1px solid var(--main-text-color);
+}
+
+.register-btn:hover {
+    background-color: var(--main-text-color);
+    color: var(--bg-color); 
+    border-color: var(--main-text-color); 
+}
+
+.social-login {
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 30px; 
 }
 
 .social-login button {
-    margin-top: 10px;
+    padding: 20px 20px; 
+    border: none; 
+    cursor: pointer; 
 }
 
 .facebook-login {
     background-color: #4267B2; 
-    color: #fff; 
+    font-size: 14px;
+    text-align: center; 
+    line-height: 1; 
+    letter-spacing: 0.2px;
+    color: var(--bg-color);
+    font-family: var(--primary-font);
+    font-weight: normal;
 }
 
 .google-login {
     background-color: #DB4437; 
-    color: #fff; 
+    font-size: 14px;
+    text-align: center; 
+    line-height: 1; 
+    letter-spacing: 0.2px;
+    color: var(--bg-color);
+    font-family: var(--primary-font);
+    font-weight: normal;
 }
 
 .privacy-policy {
+    text-align: right; 
     font-size: 12px; 
-    text-align: center; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    color: var(--dark-gray-color);
+    font-family: var(--primary-font);
+    font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
