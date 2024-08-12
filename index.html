@@ -20,8 +20,9 @@
     <link rel="stylesheet" href="./css/new.css">
     <link rel="stylesheet" href="./css/sale.css">
     <link rel="stylesheet" href="./css/search.css">
-    <link rel="stylesheet" href="./css/personal-modal.css">
-    
+    <link rel="stylesheet" href="./css/personal-modal.css"> 
+    <link rel="stylesheet" href="./css/basket.css">
+
 </head>
 <body>
   <header class="header">
@@ -100,7 +101,16 @@
       </div>
       <div class="basket">
         <svg width="20" height="20"><use href="./img/icons.svg#icon-big-basket"></use></svg>
-      </div>
+        <p class="basket-count">(0)</p>
+    </div>
+    <div id="basket-toast" class="toast">
+        <span>Ваша корзина пуста</span>
+        <button id="close-toast" class="close-basket">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+        </svg>
+        </button>
+    </div>     
     </div>
   </header>
 
@@ -619,7 +629,7 @@
                   <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
               </svg>
           </button>
-          <h2>Вхід до особистого кабінету</h2>
+          <h2>Вход в персональный кабинет</h2>
           <form class="login-form">
             <div class="form-group">
               <label for="email" class="visually-hidden">E-mail</label>
@@ -634,16 +644,16 @@
                   </svg>
               </button>
           </div>              
-              <a href="#" class="forgot-password">забули свій пароль?</a>
-              <button type="submit" class="login-btn">Увійти</button>
-              <button type="button" class="register-btn">Зареєструватися</button>
+              <a href="#" class="forgot-password">забыли свой пароль?</a>
+              <button type="submit" class="login-btn">Войти</button>
+              <button type="button" class="register-btn">Зарегистрироваться</button>
               <div class="social-login">
-                  <button type="button" class="facebook-login">Увійти через Facebook</button>
-                  <button type="button" class="google-login">Увійти через Google</button>
+                  <button type="button" class="facebook-login">Войти через Facebook</button>
+                  <button type="button" class="google-login">Войти через Google</button>
               </div>
           </form>
           <p class="privacy-policy">
-              Здійснюючи реєстрацію або вхід з використанням свого профілю в соціальній мережі, я тим самим даю згоду на зв'язування мого аккаунта відповідно до положень Політики конфіденційності
+            Осуществляя регистрацию или вход с использованием своего профиля в социальной сети, тем самым даю согласие на связывание моего аккаунта в соответствии с положениями Политики конфиденциальности
           </p>
       </div>
   </div>
@@ -656,7 +666,8 @@
 <script src="./js/carousel-slider.js"></script>
 <script src="./js/price.js"></script>
 <script src="./js/close-btn.js"></script>
-<script src="./js/personal-modal.js"></script>
+<script src="./js/personal-modal.js"></script>  
+<script src="./js/basket.js"></script> 
 
 </body>
 </html>
