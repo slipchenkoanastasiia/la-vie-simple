@@ -125,13 +125,13 @@ img {
   text-transform: uppercase;
   color: var(--main-brand-color);
   font-family: var(--logo-font);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -143,12 +143,12 @@ img {
 }
 
 .nav-menu {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--main-text-color);
-  font-weight: 400;
+  font-weight: 500;
   font-family: var(--primary-font);
   text-decoration: none;
   position: relative;
@@ -388,6 +388,57 @@ color: var(--bg-color);
 text-transform: uppercase;
 font-weight: 550;
 font-family: var(--primary-font);
+}
+
+/* Стилі для нижнього хедера */
+.slider-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 82px;
+  padding: 0 14px;
+  margin: auto;
+}
+
+.slider-footer-logo {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+}
+
+.slider-footer-name {
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  font-family: var(--logo-font);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.slider-footer-subname {
+  font-size: 12px;
+  line-height: 1.1; 
+  letter-spacing: 0.2px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.slider-footer-text p {
+  font-size: 14px;
+  line-height: 1.4; 
+  letter-spacing: 0.2px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-weight: 400;
+  text-align: right; 
+  overflow-wrap: break-word; 
+  word-break: break-word; 
+  white-space: normal; 
+  max-width: 360px;
 }
 
 /* Стилі для бігаючої стрічки */
