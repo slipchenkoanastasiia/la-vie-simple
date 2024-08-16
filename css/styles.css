@@ -414,13 +414,13 @@ font-family: var(--primary-font);
   color: var(--main-text-color);
   font-family: var(--logo-font);
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 13px;
 }
 
 .slider-footer-subname {
-  font-size: 12px;
-  line-height: 1.1; 
-  letter-spacing: 0.2px;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.5px;
   color: var(--main-text-color);
   font-family: var(--primary-font);
   font-weight: 500;
@@ -428,17 +428,48 @@ font-family: var(--primary-font);
 }
 
 .slider-footer-text p {
-  font-size: 14px;
-  line-height: 1.4; 
-  letter-spacing: 0.2px;
-  color: var(--main-text-color);
-  font-family: var(--primary-font);
-  font-weight: 400;
   text-align: right; 
   overflow-wrap: break-word; 
   word-break: break-word; 
   white-space: normal; 
-  max-width: 360px;
+  max-width: 331px;
+}
+
+.slider-footer-tel {
+  font-size: 16px;
+  line-height: 1.1; 
+  letter-spacing: 0.2px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.slider-footer-tel a {
+  color: var(--main-text-color);
+  text-decoration: none; 
+}
+
+.slider-footer-tel a:hover {
+  color: var(--main-brand-color);
+}
+
+.slider-footer-adr {
+  font-size: 14px;
+  line-height: 1.1; 
+  letter-spacing: 0.2px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-weight: 400;
+}
+
+.slider-footer-adr a {
+  color: var(--main-text-color);
+  text-decoration: none; 
+}
+
+.slider-footer-adr a:hover {
+  color: var(--main-brand-color)
 }
 
 /* Стилі для бігаючої стрічки */
@@ -1020,6 +1051,6 @@ margin-bottom: 5px;
 }
 
 .footer-menu ul li a {
-color: var(--bg-color); /* Додано колір тексту для посилань */
-text-decoration: none; /* Заборона підкреслення */
+color: var(--bg-color); 
+text-decoration: none; 
 }
