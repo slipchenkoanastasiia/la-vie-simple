@@ -35,6 +35,7 @@
     margin: auto;
     padding: 0;
     position: relative;
+    margin: 0;
 }
 
 .modal-image {
@@ -46,7 +47,9 @@
 
 .modal-image img {
     width: 100%;
-    object-fit: contain; 
+    height: 100%; /* додайте це, якщо необхідно */
+    object-fit: cover; /* змінено на cover, якщо потрібно, щоб зображення заповнило весь контейнер */
+    display: block; /* переконайтеся, що додано */
 }
 
 .modal-text {
@@ -56,8 +59,10 @@
 
 .close {
     position: absolute; 
-    top: 10px; 
-    right: 10px; 
+    top: 5px; 
+    right: 5px; 
+    height: 24px;
+    width: 24px;
     color: var(--dark-gray-color);
     font-size: 28px;
     font-weight: bold;
@@ -66,57 +71,60 @@
 
 .close:hover,
 .close:focus {
-    color: var(--main-brand-color);
+   
+    color: var(--main-text-color);
     text-decoration: none;
 }
 
 .modal-head {
-    font-size: 20px;
-    line-height: 1.1;
-    letter-spacing: 0.3px;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.4px;
+    color: var(--main-text-color);
     font-weight: 600;
     font-family: var(--primary-font);
-    color: var(--main-brand-color);
-    text-transform: uppercase;
     text-align: center;
-    margin-top: 110px;
+    margin-top: 100px;
+    margin-bottom: 6px;
 }
 
 .modal-head-2 {
-    font-size: 40px;
-    line-height: 1.1;
+    font-size: 60px;
+    line-height: 1;
     letter-spacing: 0.3px;
-    font-weight: 600;
+    font-weight: 700;
     font-family: var(--primary-font);
-    color: var(--main-brand-color);
+    color: red;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 0;
 }
 
 
 .modal-text-1 {
+    margin-bottom: 20px;
     font-size: 16px;
-    line-height: 0.7; 
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-family: var(--primary-font);
+    line-height: 1;
+    letter-spacing: 0.4px;
     color: var(--main-text-color);
+    font-weight: 600;
+    font-family: var(--primary-font);
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
   }
 
 
 .modal-text-2 {
     font-size: 14px;
+    text-align: center; 
     line-height: 1.1; 
-    letter-spacing: 0.5px;
-    font-weight: 300;
-    font-family: var(--primary-font);
+    letter-spacing: 0.2px;
     color: var(--main-text-color);
+    font-family: var(--primary-font);
+    font-weight: normal;
     text-align: center;
-    margin-top: 10px;
   }
 
   .button-container {
@@ -126,18 +134,19 @@
 
 .button-name {
     font-size: 14px;
-    line-height: 1.1;
-    letter-spacing: 0.3px;
+    text-align: center; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
     color: var(--main-text-color);
     font-family: var(--primary-font);
-    padding: 16px 33px;
+    font-weight: normal;
     background-color: var(--bg-color);
     border: 1px solid var(--main-text-color);
-    border-radius: 5px;
     cursor: pointer; 
+    padding: 15px 30px 15px 30px;
 }
 
 .button-name:hover {
-    background-color: var(--main-brand-color);
+    background-color: var(--main-text-color);
     color: var(--bg-color);
 }
