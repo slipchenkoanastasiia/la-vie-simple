@@ -78,10 +78,10 @@
 
 .modal-head {
     font-size: 12px;
-    line-height: 1;
-    letter-spacing: 0.4px;
-    color: var(--main-text-color);
-    font-weight: 600;
+    text-align: center; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    font-weight: 500;
     font-family: var(--primary-font);
     text-align: center;
     margin-top: 100px;
@@ -117,10 +117,11 @@
 
 
 .modal-text-2 {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center; 
     line-height: 1.1; 
     letter-spacing: 0.2px;
+    font-weight: 500;
     color: var(--main-text-color);
     font-family: var(--primary-font);
     font-weight: normal;
