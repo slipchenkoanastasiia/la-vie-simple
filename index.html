@@ -25,6 +25,7 @@
 
 </head>
 <body>
+
   <header class="header">
     <div class="container">
       <nav class="page-nav">
@@ -79,9 +80,6 @@
               </li>
             </ul>
           </li>
-        </ul>
-        
-          </li>
           <li class="nav-item"><a class="nav-menu link" href="./new-collection.html">Новинки</a></li>
           <li class="nav-item"><a class="nav-menu nav-menu-link link" href="./sale.html">Sale</a></li>
           <li class="nav-item"><a class="nav-menu link" href="./contact.html">Контакти</a></li>
@@ -117,10 +115,17 @@
         <svg width="20" height="20"><use href="./img/icons.svg#icon-big-basket"></use></svg>
         <p class="basket-count">(0)</p>
       </div>
+      <div id="basket-toast" class="toast">
+        <span>Ваша корзина пуста</span>
+        <button id="close-toast" class="close-basket">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+          </svg>
+        </button>
+      </div>     
     </div>
   </header>
   
-
       <main>
         <section class="slider">
           <div class="slides">
@@ -561,67 +566,67 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-logo">
-              <img src="./img/logo-heder-2.jpg" alt="Логотип" width="52" height="52">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="./img/logo-heder-2.jpg" alt="Логотип" width="52" height="52">
+      </div>
+      <div class="footer-info">
+        <p><span>Подписывайтесь и узнавайте первой</span> <span>про новинки и акции</span></p>
+      </div>
+      <div class="footer-subscribe">
+        <form action="#" method="post">
+          <div class="input-wrapper">
+            <input type="email" name="email" id="email" placeholder="введите ваш e-mail" required>
+            <button type="submit" id="subscribe-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M19 12l-6.4 6.4 1.6 1.6 8-8-8-8-1.6 1.6L19 12z" fill="white"/>
+              </svg>
+            </button>
           </div>
-          <div class="footer-info">
-            <p><span>Подписывайтесь и узнавайте первой</span> <span>про новинки и акции</span></p>
+        </form>
+      </div>
+      <div class="footer-social-contact">
+        <div class="footer-social">
+          <ul class="social-links">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><svg class="icon-facebook icon-footer" width="19" height="19"><use href="./img/icons.svg#icon-facebook"></use></svg></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><svg class="icon-instagram icon-footer" width="19" height="19"><use href="./img/icons.svg#icon-instagram"></use></svg></a></li>
+          </ul>
         </div>
-        <div class="footer-subscribe">
-          <form>
-            <div class="input-wrapper">
-              <input type="email" name="email" id="email" placeholder="введите ваш e-mail">
-              <button type="submit" id="subscribe-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                  <path d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M19 12l-6.4 6.4 1.6 1.6 8-8-8-8-1.6 1.6L19 12z" fill="white"/>
-                </svg>
-                
-              </button>
-            </div>
-          </form>
-        </div>
-          <div class="footer-social-contact">
-            <div class="footer-social">
-                <ul class="social-links">
-                    <li><a href="https://www.facebook.com//" target="_blank"><svg class="icon-facebook icon-footer" width="19" height="19"><use href="./img/icons.svg#icon-facebook"></use></svg></a></li>
-                    <li><a href="https://www.instagram.com/" target="_blank"><svg class="icon-instagram icon-footer" width="19" height="19"><use href="./img/icons.svg#icon-instagram"></use></svg></a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <p>+7774 621 3224</p>
-            </div>
+        <div class="footer-contact">
+          <p>+7774 621 3224</p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="footer-menu">
-            <h3 class="footer-name">Каталог</h3>
-            <ul>
-                <li><a href="#">Spring Collection</a></li>
-                <li><a href="#">Макси</a></li>
-                <li><a href="#">Миди</a></li>
-                <li><a href="#">Sale</a></li>
-            </ul>
-        </div>
-        <div class="footer-menu">
-            <h3 class="footer-name">Покупателям</h3>
-            <ul>
-                <li><a href="#">Личный кабинет</a></li>
-                <li><a href="#">Вопрос-ответ</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-menu">
+        <h3 class="footer-name">Каталог</h3>
+        <ul>
+          <li><a href="#">Spring Collection</a></li>
+          <li><a href="#">Макси</a></li>
+          <li><a href="#">Миди</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-menu">
+        <h3 class="footer-name">Покупателям</h3>
+        <ul>
+          <li><a href="#">Личный кабинет</a></li>
+          <li><a href="#">Вопрос-ответ</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
     </div>
     <div class="site-info">
       <p class="info-link">&copy; 2023 La Vie. Все права защищены.</p>
-      <p class="info-link">Политика конфиденциальности</p>
-      <p class="info-link">Публичный договор(оферта)</p>
-      <p class="info-link">Язык сайта</p>
-  </div> 
-  </footer> 
+      <p class="info-link"> Политика конфиденциальности</a></p>
+      <p class="info-link"> Публичный договор(оферта)</a></p>
+      <p class="info-link"> Язык сайта</a></p>
+    </div> 
+  </div>
+</footer>
 
   <div id="myModal" class="modal"> 
     <div class="modal-content">

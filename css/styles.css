@@ -131,7 +131,7 @@ img {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -153,6 +153,10 @@ img {
   padding: 20px;
 }
 
+.nav-menu-link {
+  color: red;
+}
+
 .nav-menu:hover {
   color: var(--main-brand-color);
 }
@@ -160,18 +164,18 @@ img {
 /* Стилі для випадаючого меню */
 .dropdown-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: absolute;
   top: calc(100% + 5px);
   left: 0;
   background-color: var(--bg-color);
   border: none;
   z-index: 999;
-  width: 710px;
-  height: 300px;
+  width: 700px;
+  height: 270px;
   padding: 10px;
   overflow: auto;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .nav-item:hover .dropdown-content {
@@ -181,8 +185,32 @@ img {
 
 .dropdown-item {
   position: relative;
-  padding: 5px 10px;
   white-space: nowrap;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.sub-dropdown-content {
+  font-size: 14px;
+  line-height: 1.1; 
+  letter-spacing: 0.2px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-weight: 400;
+  margin-top: 10px; 
+}
+
+.dropdown-item li {
+  position: relative;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--main-text-color);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 0.2; 
 }
 
 .dropdown-item a .dropdown-icon {
@@ -193,37 +221,8 @@ img {
   object-fit: cover;
 }
 
-.dropdown-menu {
-  flex: 1;
-  padding-right: 5px;
-}
-
-.sub-dropdown-menu {
-  flex: 1;
-  padding-left: 5px;
-}
-
-.dropdown-item a {
-  color: var(--main-text-color);
-  text-decoration: none;
-  font-size: 14px;
-  display: block;
-  padding: 5px 0;
-}
-
-.sub-dropdown-item a {
-  padding: 5px 20px;
-  color: var(--main-text-color);
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content:hover {
-  background-color: var(--bg-hover-color);
-}
-
 .dropdown-item a:hover,
-.sub-dropdown-item a:hover {
+.sub-dropdown-content a:hover {
   background-color: var(--bg-hover-color);
   color: var(--main-brand-color);
 }
@@ -246,7 +245,7 @@ img {
 }
 
 .custom-icon {
-color: var(--main-text-color);
+  color: var(--main-text-color);
 }
 
 .nav-icons::after {
@@ -267,12 +266,12 @@ color: var(--main-text-color);
 
 .basket-count {
   font-size: 16px; 
-    line-height: 1.1; 
-    letter-spacing: 0.2px;
-    color: var(--main-text-color);
-    font-family: var(--primary-font);
-    font-weight: 400;
-    margin-left: 8px;
+  line-height: 1.1; 
+  letter-spacing: 0.2px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-weight: 400;
+  margin-left: 8px;
 }
 
 /* Стилі для слайдера */
@@ -1030,11 +1029,10 @@ font-weight: bold;
  .footer-bottom {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   align-self: flex-start; 
   align-items: center;
-  margin-right: 60px;
-  gap: 120px;
+  margin-left: 80px;
+  gap: 100px;
  }
  
  .footer-menu {
