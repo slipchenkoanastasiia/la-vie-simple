@@ -1,24 +1,29 @@
+.product-list-container {
+    margin-bottom: 40px;
+    align-items: center;
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
 .left-content h1 {
     font-size: 16px; 
     line-height: 1.1; 
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
     color: var(--dark-gray-color);
     font-family: var(--primary-font); 
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .right-content .sort {
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1;
     letter-spacing: 0.3px;
     color: var(--main-text-color);
@@ -27,18 +32,24 @@
 }
 
 .right-content .sort label {
-    margin-right: 20px; 
+    margin-right: 10px; 
 }
 
 .right-content .sort .custom-select {
     position: relative;
     display: inline-block;
-    width: 200px;
+    width: 180px;
+    height: 40px; 
+    line-height: 40px; 
+    border: none; 
+    background-color: var(--bg-color);
+    box-sizing: border-box; 
 }
 
 .right-content .sort select {
-    padding: 10px; 
     width: 100%;
+    height: 100%;
+    padding: 0 35px 0 10px; 
     border: none;
     outline: none;
     -webkit-appearance: none;
@@ -46,18 +57,21 @@
     appearance: none;
     background-color: transparent;
     cursor: pointer;
+    font-size: 14px;
+    line-height: normal; 
 }
 
 .right-content .sort .arrow-icon {
     position: absolute;
     top: 50%;
-    right: 5px;
+    right: 10px;
     transform: translateY(-50%);
     pointer-events: none;
+    fill: var(--main-text-color);
 }
 
 select {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 0.7;
     letter-spacing: 0.3px;
     color: var(--main-text-color);
@@ -113,22 +127,28 @@ option:hover {
 
 .filter-group select {
     width: 100%;
-    padding: 12px 14px;
+    padding: 12px 40px 12px 14px; 
     background-color: var(--bg-color);
     font-size: 14px;
     color: var(--main-text-color);
     cursor: pointer;
     appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="30" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 10px center;
-    background-size: 16px 16px;
+    background-size: 13px 13px;
+    border: 1px solid var(--main-text-color); 
+    border-radius: 0; 
+    box-sizing: border-box; 
+    line-height: 1.1; 
+    height: auto; 
 }
 
 .filter-group option {
     background-color: var(--bg-color);
     font-size: 14px;
     color: var(--main-text-color);
+    padding: 5px; 
 }
 
 .price-inputs {
@@ -184,6 +204,7 @@ option:hover {
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s;
+
 }
 
 .price-buttons button:hover {
@@ -194,8 +215,8 @@ option:hover {
     padding: 10px 15px;
     background-color: var(--bg-color);
     color: var(--main-text-color);
-    border: 1px solid #000;
-    border-radius: 4px;
+    border: 1px solid var(--main-text-color); 
+    border-radius: 0; 
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -221,7 +242,7 @@ option:hover {
     background-color: var(--main-text-color);
     color: var(--bg-color);
     border: 1px solid #000;
-    border-radius: 4px;
+    border-radius: 0; 
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -257,13 +278,38 @@ option:hover {
     position: relative; 
     flex: 0 0 calc(33.33% - 10px);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .product-item img {
     width: 100%;
-    height: auto;
+    height: 378px;
     object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 56px; 
+    left: 0;
+    width: 100%;
+    height: 52px; 
+    background-color: var(--main-brand-color);
+    color: var(--bg-color);
+    text-align: center; 
+    font-size: 14px;
+    line-height: 52px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    opacity: 0; 
+    pointer-events: none; 
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+    cursor: pointer;
+}
+
+ .product-item:hover .overlay,
+.product-item:focus .overlay {
+    opacity: 1;
+    pointer-events: auto; 
 }
 
 .svg-row {
@@ -279,7 +325,6 @@ option:hover {
     cursor: pointer;
 }
 
-
 .title-row {
     font-size: 12px;
     text-align: left; 
@@ -287,19 +332,19 @@ option:hover {
     letter-spacing: 0.2px;
     color: var(--main-text-color);
     font-family: var(--primary-font);
-    font-weight: normal;
+    font-weight: 500;
     margin-top: 14px;
 }
 
 .caption-row {
-    font-size: 12px;
+    font-size: 14px;
     text-align: left; 
     line-height: 1.1; 
     letter-spacing: 0.2px;
     color: var(--main-text-color);
     font-family: var(--primary-font);
-    padding-top: 7px;
-    font-weight: bold;
+    padding-top: 5px;
+    font-weight: 700;
 }
 
 .product-item button {
@@ -327,18 +372,18 @@ option:hover {
 
 .pagination {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
 .page-number {
     cursor: pointer;
-    font-size: 16px; 
+    font-size: 18px; 
     line-height: 1.1; 
     letter-spacing: 0.2px;
-    color: var(--dark-gray-color);
+    color: var(--main-text-color);
     font-family: var(--primary-font);
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .page-number:hover {
@@ -346,7 +391,7 @@ option:hover {
     font-size: 16px; 
     line-height: 1.1; 
     letter-spacing: 0.2px;
-    color: var(--main-text-color);
+    color: var(--dark-gray-color);
     font-family: var(--primary-font);
     font-weight: 400;
 }
@@ -357,16 +402,16 @@ option:hover {
 
 #show-more-btn {
     width: auto;
-    padding: 10px 30px;
+    padding: 15px 35px;
     background-color: var(--main-text-color);
     color: var(--bg-color);
     border: none;
-    border-radius: 4px;
+    border-radius: none;
     cursor: pointer;
     transition: background-color 0.3s;
     margin: 0 auto; 
     display: block; 
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1;
     letter-spacing: 0.3px;
     font-weight: 600;
@@ -377,7 +422,7 @@ option:hover {
     background-color: var(--bg-color);
     color: var(--main-text-color);
     border: 1px solid #000;
-    border-radius: 4px;
+    border-radius: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
