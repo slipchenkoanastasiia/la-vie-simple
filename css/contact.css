@@ -1,235 +1,197 @@
 .container-contact {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start; /* Вирівнює елементи по верхньому краю */
     gap: 20px;
     margin-top: 30px;
+    margin-bottom: 40px;
 }
 
-.contact-left {
-    flex: 1.75;
+.contact-left, .contact-right {
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+.contact-left {
+    flex: 2;
+    min-height: 500px; /* Додає мінімальну висоту, якщо потрібно */
+}
+
 .contact-right {
-    flex: 1.25;
-    background-color: var(--bg-color);
+    flex: 1;
+    min-height: 500px; /* Додає мінімальну висоту, якщо потрібно */
 }
 
-.contact-name {
-    margin-bottom: 20px;
-}
-
-.contact-name p {
-    display: inline; 
-}
-
-.c-name {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--main-text-color);
-    font-family: var(--logo-font);
-    text-transform: uppercase;
-    margin-right: 10px;
-}
-
-.c-cont {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--main-text-color);
-    font-family: var(--primary-font);
-}
-
-.contact-text {
-    font-size: 16px;
-    line-height: 1.1; 
-    letter-spacing: 0.4px;
-    color: var(--dark-gray-color);
-    font-weight: 500;
-    font-family: var(--primary-font);
-}
-
-.contact-info {
+.contact-header {
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    gap: 20px;
+    margin-bottom: 30px; /* Відступ між заголовками */
 }
 
-.contact-tel {
+.contact-title {
+    font-size: 24px; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
     color: var(--main-text-color);
-    font-size: 24px;
-    line-height: 1.3; 
-    letter-spacing: 0.5px;
+    font-family: var(--logo-font);
+    font-weight: 600;
+    margin: 0; /* Знімає відступи по замовчуванню */
+}
+
+.contact-subtitle {
+    font-size: 24px; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    color: var(--main-text-color);
+    font-family: var(--primary-font); 
+    font-weight: 600;
     text-transform: uppercase;
-    font-family: var(--primary-font);
-    margin-right: 30px;
+    margin: 0; /* Знімає відступи по замовчуванню */
+}
+
+.contact-description {
+    font-size: 14px; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    color: var(--main-text-color);
+    font-family: var(--primary-font); 
+    font-weight: 400;
+    max-width: 560px;
+    margin-bottom: 10px;
+}
+
+.contact-details {
+    display: flex;
+    gap: 70px;
+    margin-bottom: 30px;
+}
+
+.contact-phone {
+    font-size: 24px; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    color: var(--main-text-color);
+    font-family: var(--primary-font); 
     font-weight: 600;
 }
 
-.contact-social {
+.social-links {
     display: flex;
     gap: 10px;
-    color: var(--main-text-color);
 }
 
-.contact-social li {
+.social-links li {
     list-style: none;
 }
 
-.contact-social li a {
+.social-links li a {
     display: block;
+    color: var(--main-text-color);
 }
 
-#map-container {
-    border: 1px solid var(--light-gray-color);
-    border-radius: 5px;
-    overflow: hidden;
+.map iframe {
     width: 100%;
-    height: 100vh; 
-    display: flex;
-    flex-direction: column; 
-    margin-top: 55px;
-}
-
-#map-container iframe {
-    width: 100%;
-    height: 100%;
+    height: 500px;
     border: 0;
 }
 
-.feedback-name {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--main-text-color);
-    font-family: var(--primary-font);
-    margin-bottom: 20px;
-}
-
-.feedback-form label {
-    display: none; 
-}
-
-.feedback-form input[type="text"],
-.feedback-form input[type="tel"],
-.feedback-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--light-gray-color);
+.feedback-form {
+    background-color: var(--bg-color);
     border-radius: 5px;
-    background-color: var(--light-gray-color); 
-    color: var(--main-text-color); 
-    height: 50px; 
-}
-
-.feedback-form input[type="text"]::before,
-.feedback-form input[type="tel"]::before,
-.feedback-form textarea::before {
-    content: attr(placeholder); 
-    margin: 10px 0 5px;
-}
-
-.feedback-form input[type="text"]::placeholder,
-.feedback-form input[type="tel"]::placeholder,
-.feedback-form textarea::placeholder {
-    font-size: 14px;
-    line-height: 0.7; 
-    letter-spacing: 0.3px;
-    color: var(--main-text-color);
-    font-weight: 500;
-    font-family: var(--primary-font);
-}
-
-.feedback-form .name-phone-container {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Вирівнює елементи по вертикалі всередині форми */
+}
+
+.feedback-form h2 {
+    font-size: 24px; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    color: var(--main-text-color);
+    font-family: var(--primary-font); 
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+    text-transform: uppercase; /* Вирівнює текст по лівому краю */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
 .feedback-form input, .feedback-form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid var(--light-gray-color);
-    border-radius: 5px;
-    background-color: var(--light-gray-color); 
-    color: var(--bg-color);
+    border-radius: none;
+    background-color: var(--light-gray-color);
+    color: var(--main-text-color);
 }
-
-.feedback-form input[type="text"],
-.feedback-form input[type="tel"] {
-    width: calc(50% - 5px); 
-}
-
-.feedback-form .message-container {
-    position: relative;
-}
-
 
 .feedback-form textarea {
-    width: 100%; 
-    padding-right: 40px; 
-    box-sizing: border-box; 
+    height: 100px;
+    resize: vertical;
 }
 
-.feedback-form .send-button {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background: none; 
-    border: none; 
-    padding: 0;
+/* Стилізує текст у плейсхолдерах для всіх інпутів та textarea */
+input::placeholder, textarea::placeholder {
+    font-size: 16px; /* Розмір шрифту */
+    color: var(--bg-color);
+    font-family: var(--primary-font); /* Шрифт тексту плейсхолдера */
+    font-weight: 400; /* Вага шрифту */
+    letter-spacing: 0.2px; /* Відстань між літерами */
+}
+
+/* Додаткові стилі для конкретних типів інпутів */
+input[type="text"]::placeholder {
+    font-size: 16px; /* Розмір шрифту для текстового поля */
+}
+
+input[type="tel"]::placeholder {
+    font-size: 16px; /* Розмір шрифту для телефонного поля */
+}
+
+.submit-button {
+    background: none;
+    border: none;
     cursor: pointer;
     width: 30px;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.feedback-form .send-button svg {
-    fill: var(--main-brand-color); 
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 
 .stores {
     background-color: var(--main-brand-color);
-    padding-top: 20px;
-    padding-left: 20px;
-    width: 100%;
-    height: 100vh;
-    margin-top: 50px;
+    padding: 10px;
+    color: var(--bg-color);
+    height: 350px;
 }
 
 .stores h2 {
-    margin-bottom: 10px;
-    color: var(--bg-color); 
-    font-size: 24px;
+    font-size: 24px; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    font-family: var(--primary-font); 
     font-weight: 600;
     color: var(--bg-color);
-    font-family: var(--primary-font);
-    margin-bottom: 20px;
+    text-align: left;
 }
 
-.store {
-    color: var(--bg-color); 
-}
-
-.store h3 {
-    font-size: 16px;
+.store h3, .store p {
+    font-size: 14px; 
     line-height: 1.1; 
-    letter-spacing: 0.4px;
-    color: var(--bg-color);
-    font-weight: 600;
-    font-family: var(--primary-font);
-    margin-bottom: 10px;
-}
-
-.store p {
-    font-size: 16px;
-    line-height: 1.1; 
-    letter-spacing: 0.4px;
-    color: var(--bg-color);
+    letter-spacing: 0.2px;
+    font-family: var(--primary-font); 
     font-weight: 400;
-    font-family: var(--primary-font);
+    color: var(--bg-color);
 }
-

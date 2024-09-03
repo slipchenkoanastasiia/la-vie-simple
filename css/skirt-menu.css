@@ -45,6 +45,32 @@
     box-sizing: border-box; 
 }
 
+.right-content {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.right-content .sort {
+    position: relative;
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+}
+
+.right-content .sort label {
+    font-size: 14px;
+    color: var(--main-text-color);
+    font-family: var(--primary-font);
+    font-weight: 400;
+}
+
+.right-content .custom-select {
+    position: relative;
+    display: inline-flex;
+    align-items: center; 
+}
+
 .right-content .sort select {
     width: 100%;
     height: 30px;
@@ -57,8 +83,8 @@
     background-color: transparent;
     cursor: pointer;
     font-size: 14px;
-    line-height: 30px; 
-    margin: 0; 
+    line-height: 30px;
+    margin: 0;
 }
 
 .right-content .sort .arrow-icon {
@@ -68,15 +94,6 @@
     transform: translateY(-50%);
     pointer-events: none;
     fill: var(--main-text-color);
-}
-
-select {
-    font-size: 14px;
-    line-height: 30px; 
-    letter-spacing: 0.3px;
-    color: var(--main-text-color);
-    font-weight: 400;
-    font-family: var(--primary-font);
 }
 
 
