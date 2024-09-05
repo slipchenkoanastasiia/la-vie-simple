@@ -107,7 +107,7 @@
 }
 
 .feedback-form h2 {
-    font-size: 24px; 
+    font-size: 21px; 
     line-height: 1.1; 
     letter-spacing: 0.2px;
     color: var(--main-text-color);
@@ -140,7 +140,7 @@
 
 /* Стилізує текст у плейсхолдерах для всіх інпутів та textarea */
 input::placeholder, textarea::placeholder {
-    font-size: 16px; /* Розмір шрифту */
+    font-size: 14px; /* Розмір шрифту */
     color: var(--bg-color);
     font-family: var(--primary-font); /* Шрифт тексту плейсхолдера */
     font-weight: 400; /* Вага шрифту */
@@ -149,11 +149,11 @@ input::placeholder, textarea::placeholder {
 
 /* Додаткові стилі для конкретних типів інпутів */
 input[type="text"]::placeholder {
-    font-size: 16px; /* Розмір шрифту для текстового поля */
+    font-size: 14px; /* Розмір шрифту для текстового поля */
 }
 
 input[type="tel"]::placeholder {
-    font-size: 16px; /* Розмір шрифту для телефонного поля */
+    font-size: 14px; /* Розмір шрифту для телефонного поля */
 }
 
 .submit-button {
@@ -178,18 +178,19 @@ input[type="tel"]::placeholder {
 }
 
 .stores h2 {
-    font-size: 24px; 
+    font-size: 21px; 
     line-height: 1.1; 
     letter-spacing: 0.2px;
     font-family: var(--primary-font); 
-    font-weight: 600;
+    font-weight: 400;
     color: var(--bg-color);
     text-align: left;
+    text-transform: uppercase;
 }
 
 .store h3, .store p {
     font-size: 14px; 
-    line-height: 1.1; 
+    line-height: 1.2; 
     letter-spacing: 0.2px;
     font-family: var(--primary-font); 
     font-weight: 400;

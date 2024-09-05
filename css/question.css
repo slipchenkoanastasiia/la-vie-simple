@@ -47,10 +47,12 @@
 }
 
 .question-ulp {
-    font-size: 15px; /* Розмір шрифту для більшого контрасту */
-    line-height: 1.1; /* Інтерліньяж для тексту в описах */
-    color: var(--dark-gray-color);
-    font-family: var(--primary-font);
+    font-size: 14px; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    color: var(--main-text-color);
+    font-family: var(--primary-font); 
+    font-weight: 400;
     font-weight: 400; 
     margin-top: 10px; 
     max-width: 680px;/* Збільшуємо відстань між тегами li та p */
@@ -126,7 +128,7 @@
     width: 100%; 
     padding: 10px; 
     border: 1px solid var(--light-gray-color); 
-    background-color: var(--light-gray-color); 
+    background-color: var(--light-gray-color); /* Зміна кольору фону на білий */
     color: var(--main-text-color); 
     height: 50px; 
     border-radius: 0; 
@@ -145,6 +147,10 @@
     color: var(--main-text-color); 
     font-weight: 500; 
     font-family: var(--primary-font); 
+}
+
+.feedback-form .name-email-container input[type="text"]::placeholder {
+    color: var(--bg-color); /* Зміна кольору плейсхолдера на білий */
 }
 
 .feedback-form .form-group {

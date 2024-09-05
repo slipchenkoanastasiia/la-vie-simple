@@ -1,22 +1,29 @@
-.search-container {
+.search-cont {
     margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.search-container {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+    align-items: center; 
     width: 100%;
-    position: relative; 
+    height: 70px; 
+    position: relative;
 }
 
 .search-input {
     width: 600px;
     padding: 20px 30px;
     border-radius: 25px;
-    border: 1px solid var(--light-gray-color);
-    font-size: 16px;
+    border: none;
     outline: none;
     background-color: var(--light-gray-color);
+    color: var(--bg-color);
     text-align: left;
     position: relative;
     z-index: 5; 
+    margin-bottom: 30px;
 }
 
 .search-input::placeholder {
@@ -24,20 +31,21 @@
     text-align: left; 
     line-height: 1.1; 
     letter-spacing: 0.2px;
-    color: var(--main-text-color);
+    color: var(--bg-color); 
     font-family: var(--primary-font);
-    font-weight: normal;
+    font-weight: 500;
 }
 
 h2 {
     margin-top: 80px;
-    font-size: 18px;
+    font-size: 21px;
     line-height: 1;
     letter-spacing: 0.5px;
     color: var(--main-text-color);
-    font-weight: 400;
+    font-weight: 500;
     font-family: var(--primary-font);
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .popular-queries {
@@ -67,7 +75,7 @@ h2 {
     line-height: 1;
     letter-spacing: 0.5px;
     color: var(--main-text-color);
-    font-weight: 400;
+    font-weight: 500;
     font-family: var(--primary-font);
 }
 
