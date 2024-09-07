@@ -3,6 +3,7 @@
     gap: 20px;
     align-items: flex-start;
     margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .product-image {
@@ -62,10 +63,11 @@
 
 .dropdown {
     display: flex;
-    align-items: flex-start; /* Вирівнювання елементів по верхньому краю */
+    align-items: center;
     position: relative;
     margin-top: 22px;
     cursor: pointer;
+    gap: 10px;
 }
 
 .dropdown-content {
@@ -104,7 +106,7 @@
 
 .sizes {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     margin-left: 10px;
     font-size: 15px;
     text-transform: uppercase;
@@ -114,13 +116,13 @@
 }
 
 .dropbtn {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.1;
     letter-spacing: 0.3px;
     color: var(--main-text-color);
     font-family: var(--primary-font);
-    font-weight: 600;
-    margin-bottom: 5px; /* Відступ між кнопкою та розмірами */
+    font-weight: 500;
+    margin-bottom: 5px;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -130,12 +132,16 @@
     display: flex;
     flex-direction: row; /* Горизонтальне розташування розмірів */
     gap: 10px; /* Відстань між s, m, l */
-    font-size: 15px;
+    font-size: 16px;
     text-transform: uppercase;
     color: var(--main-text-color);
-    font-weight: 400;
+    font-weight: 600;
     font-family: var(--primary-font);
     margin-bottom: 5px; /* Відступ між розмірами та "Таблица размеров" */
+}
+
+.sizes span {
+    margin-right: 10px; /* Додає додатковий відступ праворуч від кожного <span> */
 }
 
 .drop-size {
@@ -158,14 +164,12 @@
 
 .btn-basket, .btn-buy {
     padding: 10px;
-    font-size: 16px;
     cursor: pointer;
     border: none;
-    color: var(--bg-color);
 }
 
 .btn-basket {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center; 
     line-height: 1.1; 
     letter-spacing: 0.3px;
@@ -186,7 +190,7 @@
 }
 
 .btn-buy {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center; 
     line-height: 1.1; 
     letter-spacing: 0.3px;
@@ -209,8 +213,8 @@
 .desc {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 40px;
+    margin-top: 50px;
+    gap: 8px; /* Відстань між усіма елементами всередині контейнера */
 }
 
 .product-desc, .care-desc {
@@ -220,15 +224,17 @@
     color: var(--main-text-color);
     font-family: var(--primary-font);
     font-weight: 600;
+
 }
 
 .product-d, .care-d {
-    font-size: 14px;
-    line-height: 1.1; 
-    letter-spacing: 0.3px;
+    font-size: 14px; 
+    line-height: 1.0; 
+    letter-spacing: 0.2px;
     color: var(--main-text-color);
-    font-family: var(--primary-font);
-    font-weight: 500;
+    font-family: var(--primary-font); 
+    font-weight: 400;
+    margin-bottom: 10px; /* Відстань після опису та догляду */
 }
 
 .delivery-desc {
@@ -238,7 +244,7 @@
     color: var(--main-text-color);
     font-family: var(--primary-font);
     font-weight: 600;
-    margin-top: 110px;
+    margin-top: 20px;
 }
 
 .delivery-methods {
@@ -282,6 +288,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 50px;
     background-color: var(--bg-color);
     padding: 4px;
     border-top: 1px solid #ccc;
@@ -289,6 +296,7 @@
     transform: translateY(100%);
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Додає простір між елементами */
 }
 
 .product-info-fixed.visible {
@@ -301,13 +309,13 @@
     font-weight: 600;
     color: var(--main-text-color);
     font-family: var(--primary-font);
-    line-height: 0.7;
+    line-height: 1.2; /* Змінив на 1.2 для кращого відображення */
     letter-spacing: 0.3px;
 }
 
 .product-price-fix {
     font-size: 12px;
-    line-height: 0.7;
+    line-height: 1.2; /* Змінив на 1.2 для кращого відображення */
     letter-spacing: 0.3px;
     text-transform: uppercase;
     color: var(--main-text-color);
@@ -318,23 +326,22 @@
 .dropdown-fix {
     display: flex;
     align-items: center;
-    position: relative;
-    margin-left: 630px;
+    margin-left: auto; /* Додає автоматичний відступ зліва для вирівнювання */
 }
 
 .dropdown-content-fix {
-    position: absolute;
+    display: flex;
     list-style-type: none;
     padding-inline-start: 0;
-    display: flex;
     font-size: 16px;
     font-weight: 600;
     color: var(--main-text-color);
     font-family: var(--primary-font);
-    line-height: 0.7;
+    line-height: 1.2; /* Змінив на 1.2 для кращого відображення */
     letter-spacing: 0.3px;
     text-transform: uppercase;
-    transition: opacity 0.3s ease, visibility 0s linear 0.3s; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .dropdown-content-fix li {
@@ -347,25 +354,89 @@
 }
 
 .dropdown-fix:hover .dropdown-content-fix {
-    visibility: visible;
     opacity: 1;
-    transition: opacity 0.3s ease, visibility 0s linear 0s;
 }
 
-.product-btn-fixed {
-    margin-left: auto;
-}
-
-.btn-buy-fix {
+.btn-basket-fix {
     font-size: 12px;
-    text-align: center; 
-    line-height: 1.1; 
+    text-align: center;
+    line-height: 1.1;
     letter-spacing: 0.3px;
     color: var(--bg-color);
     font-family: var(--primary-font);
     padding: 9px 20px;
-    background-color: var(--main-text-color); 
+    background-color: var(--main-text-color);
     border: 1px solid var(--main-text-color);
     text-transform: uppercase;
     font-weight: 500;
 }
+
+
+
+.like-section {
+    margin-top: 50px;
+}
+
+.like-section p {
+    margin-bottom: 20px;
+}
+
+.like-title {
+    font-size: 14px;
+    line-height: 1.1; 
+    letter-spacing: 0.3px;
+    color: var(--main-text-color);
+    font-family: var(--primary-font);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.like-list {
+    display: flex; /* Використовуємо flexbox для вирівнювання елементів у рядок */
+    gap: 10px; /* Відстань між елементами */
+    list-style: none; /* Прибираємо маркери списку */
+    padding: 0; /* Забираємо відступи */
+    margin: 0; /* Забираємо відступи */
+}
+
+.like-list li {
+    display: flex;
+    flex-direction: column; /* Вертикальне розташування вмісту кожного елементу списку */
+    align-items: center; /* Вирівнюємо по центру */
+}
+
+.image-like {
+    position: relative; /* Для позиціонування елементів, як-от overlay */
+    margin-bottom: 10px; /* Відступ між зображенням та текстом */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Напівпрозорий фон */
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.text-like {
+    display: flex;
+    flex-direction: column; /* Встановлює вертикальне розміщення елементів */
+    align-items: flex-start; /* Вирівнює елементи по лівому краю */
+    justify-content: flex-start; /* Вирівнює елементи зверху */
+    width: 100%; /* Забезпечує використання повної ширини контейнера */
+    text-align: left; /* Встановлює вирівнювання тексту по лівому краю */
+    margin-top: 10px; /* Відстань між текстом та зображенням */
+}
+
+.title, .caption {
+    margin: 0; /* Видаляє додаткові відступи */
+    padding: 0; /* Видаляє додаткові внутрішні відступи */
+    text-align: left; /* Встановлює вирівнювання тексту по лівому краю */
+}
+
+
+
