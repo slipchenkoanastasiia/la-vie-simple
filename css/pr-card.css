@@ -290,14 +290,22 @@
     width: 100%;
     height: 50px;
     background-color: var(--bg-color);
-    padding: 4px;
+    padding: 4px 90px; /* Відступи з обох боків */
     border-top: 1px solid #ccc;
     transition: transform 0.3s ease-out;
     transform: translateY(100%);
     display: flex;
-    align-items: center;
-    justify-content: space-between; /* Додає простір між елементами */
+    align-items: center; /* Вирівнювання по вертикалі */
+    justify-content: space-between;
+    box-sizing: border-box; /* Враховує padding у ширину */
 }
+
+.product-title-fix,
+.product-price-fix,
+.dropdown-fix {
+    margin: 0; /* Вирівнювання по бокам */
+}
+
 
 .product-info-fixed.visible {
     transform: translateY(0);
@@ -309,19 +317,27 @@
     font-weight: 600;
     color: var(--main-text-color);
     font-family: var(--primary-font);
-    line-height: 1.2; /* Змінив на 1.2 для кращого відображення */
+    line-height: 1.2;
     letter-spacing: 0.3px;
+    display: flex;
+    align-items: center; /* Додає вертикальне вирівнювання тексту */
+    height: 100%;
+    text-transform: none;  /* Забезпечує, що заголовок використовує всю висоту батьківського контейнера */
 }
 
 .product-price-fix {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.2; /* Змінив на 1.2 для кращого відображення */
     letter-spacing: 0.3px;
-    text-transform: uppercase;
     color: var(--main-text-color);
     font-weight: 500;
     font-family: var(--primary-font);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center; /* Додає вертикальне вирівнювання тексту */
+    height: 100%;
 }
+
 
 .dropdown-fix {
     display: flex;
@@ -358,7 +374,7 @@
 }
 
 .btn-basket-fix {
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     line-height: 1.1;
     letter-spacing: 0.3px;
@@ -367,10 +383,22 @@
     padding: 9px 20px;
     background-color: var(--main-text-color);
     border: 1px solid var(--main-text-color);
+    font-weight: 600;
     text-transform: uppercase;
-    font-weight: 500;
+    cursor: pointer;
 }
 
+.btn-basket-fix:hover {
+    font-size: 14px;
+    line-height: 1.2; /* Змінив на 1.2 для кращого відображення */
+    letter-spacing: 0.3px;
+    background-color: var(--bg-color);
+    color: var(--main-text-color);
+    font-weight: 600;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    cursor: pointer;
+}
 
 
 .like-section {
