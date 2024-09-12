@@ -438,18 +438,6 @@
     margin-bottom: 10px; /* Відступ між зображенням та текстом */
 }
 
-.overlay {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7); /* Напівпрозорий фон */
-    color: white;
-    padding: 5px;
-    border-radius: 3px;
-    font-size: 14px;
-}
-
 .text-like {
     display: flex;
     flex-direction: column; /* Встановлює вертикальне розміщення елементів */

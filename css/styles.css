@@ -162,8 +162,8 @@ img {
 }
 
 /* Стилі для випадаючого меню */
-.dropdown-content {
-  display: flex;
+.menu-dropdown {
+  display: none;
   justify-content: space-around;
   position: absolute;
   top: calc(100% + 5px);
@@ -172,18 +172,18 @@ img {
   border: none;
   z-index: 999;
   width: 700px;
-  height: 270px;
+  height: 250px;
   padding: 10px;
   overflow: auto;
-  margin-top: 35px;
+  margin-top: 25px;
 }
 
-.nav-item:hover .dropdown-content {
+.nav-item:hover .menu-dropdown {
   display: flex;
   background-color: var(--bg-color);
 }
 
-.dropdown-item {
+.menu-dropdown-item {
   position: relative;
   white-space: nowrap;
   font-size: 14px;
@@ -193,17 +193,17 @@ img {
   margin-right: 10px;
 }
 
-.sub-dropdown-content {
+.menu-sub-dropdown {
   font-size: 14px;
   line-height: 1.1; 
   letter-spacing: 0.2px;
   color: var(--main-text-color);
   font-family: var(--primary-font);
   font-weight: 400;
-  margin-top: 10px; 
+  margin-top: 30px; 
 }
 
-.dropdown-item li {
+.menu-dropdown-item li {
   position: relative;
   white-space: nowrap;
   font-size: 12px;
@@ -211,9 +211,10 @@ img {
   font-weight: 500;
   letter-spacing: 0.3px;
   line-height: 0.2; 
+  margin-bottom: 20px;
 }
 
-.dropdown-item a .dropdown-icon {
+.menu-dropdown-item a .menu-icon {
   width: 80px;
   height: 80px; 
   border-radius: 50%;
@@ -221,10 +222,16 @@ img {
   object-fit: cover;
 }
 
-.dropdown-item a:hover,
-.sub-dropdown-content a:hover {
+.menu-dropdown-item a,
+.menu-sub-dropdown a {
+  color: var(--main-text-color); 
+  text-decoration: none; 
+}
+
+.menu-dropdown-item a:hover,
+.menu-sub-dropdown a:hover {
   background-color: var(--bg-hover-color);
-  color: var(--main-brand-color);
+  color: var(--main-brand-color); 
 }
 
 .icons {
@@ -649,9 +656,10 @@ margin-bottom: 16px;
 }
 
 .overlay {
-position: absolute;
+position: absolute; 
 bottom: 16px; 
-left: 0;
+left: 0px;
+right: 0; 
 width: 100%;
 height: 42px; 
 background-color: var(--main-brand-color);
@@ -664,6 +672,26 @@ font-weight: 600;
 opacity: 0; 
 pointer-events: none; 
 transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.custom-overlay {
+  position: absolute;
+  top: 84%;
+  bottom: 16px;
+  left: 0px;
+  right: 0;
+  width: 100%;
+  height: 42px;
+  background-color: var(--main-brand-color);
+  color: var(--bg-color);
+  text-align: center;
+  font-size: 14px;
+  line-height: 42px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .image-container:hover .overlay,

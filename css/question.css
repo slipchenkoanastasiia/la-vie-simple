@@ -1,14 +1,14 @@
-.question {
+.faq-container {
     display: flex;
     gap: 24px;
     margin-top: 30px;
-}
-
-.question-section {  
+  }
+  
+  .faq-questions {  
     width: 70%;
-}
-
-.question-section ul {
+  }
+  
+  .faq-questions ul {
     font-size: 16px;
     line-height: 1;
     letter-spacing: 0.3px;
@@ -18,13 +18,13 @@
     margin-bottom: 20px;
     list-style-type: none !important; /* Прибираємо крапки у списку */
     padding: 0 !important; /* Прибираємо відступ */
-}
-
-.question-section ul li {
+  }
+  
+  .faq-questions ul li {
     margin: 30px 0px;
-}
-
-.question-p {
+  }
+  
+  .faq-title {
     font-size: 24px; 
     line-height: 1.1; 
     letter-spacing: 0.2px;
@@ -34,9 +34,9 @@
     margin-bottom: 20px; /* Зменшено відстань для лінії */
     position: relative;
     text-transform: uppercase; /* Додаємо для позиціонування псевдоелемента */
-}
-
-.question-p::after {
+  }
+  
+  .faq-title::after {
     content: ""; /* Порожній контент для створення псевдоелемента */
     display: block;
     position: absolute;
@@ -44,26 +44,25 @@
     bottom: -10px; /* Відстань від тексту до лінії */
     width: 100%;
     border-top: 1px solid #000; /* Тонка горизонтальна лінія */
-}
-
-.question-ulp {
+  }
+  
+  .faq-answer {
     font-size: 14px; 
     line-height: 1.1; 
     letter-spacing: 0.2px;
     color: var(--main-text-color);
     font-family: var(--primary-font); 
     font-weight: 400;
-    font-weight: 400; 
     margin-top: 10px; 
     max-width: 680px;/* Збільшуємо відстань між тегами li та p */
-}
-
-.question-form {
+  }
+  
+  .faq-form {
     width: 30%;
     background-color: #fff;
-}
-
-.first-form {
+  }
+  
+  .form-title {
     font-size: 21px;
     line-height: 1;
     letter-spacing: 0.3px;
@@ -72,29 +71,29 @@
     font-family: var(--primary-font);
     margin-bottom: 40px;
     text-transform: uppercase;
-}
-
-.second-form {
+  }
+  
+  .form-subtitle {
     font-size: 15px; /* Розмір шрифту для більшого контрасту */
     line-height: 1.1; /* Інтерліньяж для тексту в описах */
     color: var(--dark-gray-color);
     font-family: var(--primary-font);
     font-weight: 400; 
     margin-bottom: 10px;
-}
-
-.contact {
+  }
+  
+  .contact-info {
     display: flex;
     align-items: center; 
     gap: 10px;
     margin-bottom: 50px;
-}
-
-.contact svg {
+  }
+  
+  .contact-info svg {
     display: inline-block;
-}
-
-.contact p {
+  }
+  
+  .contact-info p {
     font-size: 18px;
     line-height: 1;
     letter-spacing: 0.3px;
@@ -102,9 +101,9 @@
     font-weight: 600;
     font-family: var(--primary-font);
     margin: 0;
-}
-
-.question-form h3 {
+  }
+  
+  .form-heading {
     font-size: 21px;
     line-height: 1;
     letter-spacing: 0.3px;
@@ -114,17 +113,17 @@
     margin-top: 0;
     margin-bottom: 20px;
     text-transform: uppercase;
-}
-
-.feedback-form label {
+  }
+  
+  .contact-form label {
     display: block;
     margin-bottom: 5px;
     color: var(--main-text-color); 
-}
-
-.feedback-form .name-email-container input[type="text"],
-.feedback-form .name-email-container input[type="email"],
-.feedback-form .name-email-container textarea {
+  }
+  
+  .contact-form .name-email-group input[type="text"],
+  .contact-form .name-email-group input[type="email"],
+  .contact-form .name-email-group textarea {
     width: 100%; 
     padding: 10px; 
     border: 1px solid var(--light-gray-color); 
@@ -132,50 +131,50 @@
     color: var(--main-text-color); 
     height: 50px; 
     border-radius: 0; 
-}
-
-.feedback-form .name-email-container input[type="email"] {
+  }
+  
+  .contact-form .name-email-group input[type="email"] {
     color: var(--main-text-color) !important; 
-}
-
-.feedback-form .name-email-container input[type="text"]::placeholder,
-.feedback-form .name-email-container input[type="email"]::placeholder,
-.feedback-form .name-email-container textarea::placeholder {
+  }
+  
+  .contact-form .name-email-group input[type="text"]::placeholder,
+  .contact-form .name-email-group input[type="email"]::placeholder,
+  .contact-form .name-email-group textarea::placeholder {
     font-size: 14px; 
     line-height: 0.7; 
     letter-spacing: 0.3px; 
     color: var(--main-text-color); 
     font-weight: 500; 
     font-family: var(--primary-font); 
-}
-
-.feedback-form .name-email-container input[type="text"]::placeholder {
+  }
+  
+  .contact-form .name-email-group input[type="text"]::placeholder {
     color: var(--bg-color); /* Зміна кольору плейсхолдера на білий */
-}
-
-.feedback-form .form-group {
+  }
+  
+  .contact-form .form-group {
     margin-bottom: 15px; 
-}
-
-.feedback-form .name-email-container {
+  }
+  
+  .contact-form .name-email-group {
     display: flex;
     flex-direction: column; 
     gap: 10px;
     margin-bottom: 10px; 
-}
-
-.feedback-form .message-container {
+  }
+  
+  .contact-form .message-container {
     position: relative;
-}
-
-.feedback-form textarea {
+  }
+  
+  .contact-form textarea {
     width: 100%; 
     padding-right: 40px; 
     box-sizing: border-box;
     border-radius: 0; 
-}
-
-.feedback-form .feedback-button {
+  }
+  
+  .contact-form .submit-btn {
     width: 100%; 
     background-color: #ffffff; 
     color: #000000; 
@@ -187,13 +186,14 @@
     font-family: var(--primary-font); 
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease; 
-}
-
-.feedback-form .feedback-button:hover {
+  }
+  
+  .contact-form .submit-btn:hover {
     background-color: #f0f0f0; 
     color: #000000; 
-}
-
-.feedback-form .feedback-button:focus {
+  }
+  
+  .contact-form .submit-btn:focus {
     outline: none; 
-}
+  }
+  
