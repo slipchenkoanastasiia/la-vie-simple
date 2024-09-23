@@ -172,7 +172,7 @@ input[type="tel"]::placeholder {
     background-color: var(--main-brand-color);
     padding: 10px;
     color: var(--bg-color);
-    height: 350px;
+    height: 395px;
 }
 
 .store-info h2 {

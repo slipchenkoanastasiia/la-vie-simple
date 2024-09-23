@@ -16,8 +16,8 @@
     font-weight: 600;
     font-family: var(--primary-font);
     margin-bottom: 20px;
-    list-style-type: none !important; /* Прибираємо крапки у списку */
-    padding: 0 !important; /* Прибираємо відступ */
+    list-style-type: none !important; 
+    padding: 0 !important; 
   }
   
   .faq-questions ul li {
@@ -31,19 +31,19 @@
     color: var(--main-text-color);
     font-family: var(--primary-font); 
     font-weight: 600;
-    margin-bottom: 20px; /* Зменшено відстань для лінії */
+    margin-bottom: 20px; 
     position: relative;
-    text-transform: uppercase; /* Додаємо для позиціонування псевдоелемента */
+    text-transform: uppercase; 
   }
   
   .faq-title::after {
-    content: ""; /* Порожній контент для створення псевдоелемента */
+    content: ""; 
     display: block;
     position: absolute;
     left: 0;
-    bottom: -10px; /* Відстань від тексту до лінії */
+    bottom: -10px; 
     width: 100%;
-    border-top: 1px solid #000; /* Тонка горизонтальна лінія */
+    border-top: 1px solid #000; 
   }
   
   .faq-answer {
@@ -54,7 +54,7 @@
     font-family: var(--primary-font); 
     font-weight: 400;
     margin-top: 10px; 
-    max-width: 680px;/* Збільшуємо відстань між тегами li та p */
+    max-width: 680px;
   }
   
   .faq-form {
@@ -74,8 +74,8 @@
   }
   
   .form-subtitle {
-    font-size: 15px; /* Розмір шрифту для більшого контрасту */
-    line-height: 1.1; /* Інтерліньяж для тексту в описах */
+    font-size: 15px; 
+    line-height: 1.1; 
     color: var(--dark-gray-color);
     font-family: var(--primary-font);
     font-weight: 400; 
@@ -127,7 +127,7 @@
     width: 100%; 
     padding: 10px; 
     border: 1px solid var(--light-gray-color); 
-    background-color: var(--light-gray-color); /* Зміна кольору фону на білий */
+    background-color: var(--light-gray-color); 
     color: var(--main-text-color); 
     height: 50px; 
     border-radius: 0; 
@@ -149,7 +149,7 @@
   }
   
   .contact-form .name-email-group input[type="text"]::placeholder {
-    color: var(--bg-color); /* Зміна кольору плейсхолдера на білий */
+    color: var(--bg-color); 
   }
   
   .contact-form .form-group {
@@ -168,32 +168,23 @@
   }
   
   .contact-form textarea {
-    width: 100%; 
-    padding-right: 40px; 
+    width: 100%;
+    padding-right: 40px;
     box-sizing: border-box;
-    border-radius: 0; 
+    border-radius: 0;
   }
   
   .contact-form .submit-btn {
-    width: 100%; 
-    background-color: #ffffff; 
-    color: #000000; 
-    border: 1px solid #000000; 
-    border-radius: 0;
-    padding: 10px 20px; 
-    cursor: pointer; 
-    font-size: 16px; 
-    font-family: var(--primary-font); 
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer;
   }
   
-  .contact-form .submit-btn:hover {
-    background-color: #f0f0f0; 
-    color: #000000; 
-  }
-  
-  .contact-form .submit-btn:focus {
-    outline: none; 
+  .contact-form .submit-btn svg {
+    fill: var(--main-text-color);
   }
   

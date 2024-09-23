@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="./css/pr-card.css">
     <link rel="stylesheet" href="./css/contact.css">
@@ -32,6 +33,11 @@
         <div class="logo-container">
           <img src="./img/logo-heder.jpg" alt="Логотип La Vie" width="31" height="31" class="logo">
           <a href="./index.html" class="logo-name link">La Vie</a>
+        </div>
+        <div class="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <ul class="nav-list list">
           <li class="nav-item">
@@ -126,6 +132,16 @@
       </div>     
     </div>
   </header>
+
+  <script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navList = document.querySelector('.nav-list');
+  
+    burgerMenu.addEventListener('click', () => {
+      burgerMenu.classList.toggle('active');
+      navList.classList.toggle('active');
+    });
+  </script>
   
       <main>
         <section class="slider">
@@ -713,7 +729,6 @@
 <script src="./js/onclick-color-svg.js"></script>
 <script src="./js/carousel-slider.js"></script>
 <script src="./js/price.js"></script>
-<script src="./js/close-btn.js"></script>
 <script src="./js/personal-modal.js"></script>  
 <script src="./js/basket.js"></script> 
 

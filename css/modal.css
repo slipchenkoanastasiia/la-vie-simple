@@ -47,9 +47,9 @@
 
 .modal-image img {
     width: 100%;
-    height: 100%; /* додайте це, якщо необхідно */
-    object-fit: cover; /* змінено на cover, якщо потрібно, щоб зображення заповнило весь контейнер */
-    display: block; /* переконайтеся, що додано */
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
 }
 
 .modal-text {

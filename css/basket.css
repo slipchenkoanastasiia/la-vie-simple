@@ -21,7 +21,7 @@
     letter-spacing: 0.4px;
     font-weight: 600;
     font-family: var(--primary-font);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .toast.show {

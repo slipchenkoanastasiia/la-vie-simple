@@ -130,18 +130,18 @@
 
 .sizes {
     display: flex;
-    flex-direction: row; /* Горизонтальне розташування розмірів */
-    gap: 10px; /* Відстань між s, m, l */
+    flex-direction: row;
+    gap: 10px; 
     font-size: 16px;
     text-transform: uppercase;
     color: var(--main-text-color);
     font-weight: 600;
     font-family: var(--primary-font);
-    margin-bottom: 5px; /* Відступ між розмірами та "Таблица размеров" */
+    margin-bottom: 5px; 
 }
 
 .sizes span {
-    margin-right: 10px; /* Додає додатковий відступ праворуч від кожного <span> */
+    margin-right: 10px; 
 }
 
 .drop-size {
@@ -152,7 +152,7 @@
     font-weight: 400;
     font-family: var(--primary-font);
     text-decoration: underline;
-    margin-left: auto; /* Розміщення "Таблица размеров" праворуч */
+    margin-left: auto; 
 }
 
 .product-btn {
@@ -214,7 +214,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 50px;
-    gap: 8px; /* Відстань між усіма елементами всередині контейнера */
+    gap: 8px; 
 }
 
 .product-desc, .care-desc {
@@ -234,7 +234,7 @@
     color: var(--main-text-color);
     font-family: var(--primary-font); 
     font-weight: 400;
-    margin-bottom: 10px; /* Відстань після опису та догляду */
+    margin-bottom: 10px; 
 }
 
 .delivery-desc {
@@ -290,20 +290,20 @@
     width: 100%;
     height: 50px;
     background-color: var(--bg-color);
-    padding: 4px 90px; /* Відступи з обох боків */
+    padding: 4px 90px; 
     border-top: 1px solid #ccc;
     transition: transform 0.3s ease-out;
     transform: translateY(100%);
     display: flex;
-    align-items: center; /* Вирівнювання по вертикалі */
+    align-items: center;
     justify-content: space-between;
-    box-sizing: border-box; /* Враховує padding у ширину */
+    box-sizing: border-box; 
 }
 
 .product-title-fix,
 .product-price-fix,
 .dropdown-fix {
-    margin: 0; /* Вирівнювання по бокам */
+    margin: 0; 
 }
 
 
@@ -320,21 +320,21 @@
     line-height: 1.2;
     letter-spacing: 0.3px;
     display: flex;
-    align-items: center; /* Додає вертикальне вирівнювання тексту */
+    align-items: center; 
     height: 100%;
-    text-transform: none;  /* Забезпечує, що заголовок використовує всю висоту батьківського контейнера */
+    text-transform: none;  
 }
 
 .product-price-fix {
     font-size: 14px;
-    line-height: 1.2; /* Змінив на 1.2 для кращого відображення */
+    line-height: 1.2; 
     letter-spacing: 0.3px;
     color: var(--main-text-color);
     font-weight: 500;
     font-family: var(--primary-font);
     text-transform: uppercase;
     display: flex;
-    align-items: center; /* Додає вертикальне вирівнювання тексту */
+    align-items: center; 
     height: 100%;
 }
 
@@ -342,7 +342,7 @@
 .dropdown-fix {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Додає автоматичний відступ зліва для вирівнювання */
+    margin-left: auto; 
 }
 
 .dropdown-content-fix {
@@ -353,7 +353,7 @@
     font-weight: 600;
     color: var(--main-text-color);
     font-family: var(--primary-font);
-    line-height: 1.2; /* Змінив на 1.2 для кращого відображення */
+    line-height: 1.2; 
     letter-spacing: 0.3px;
     text-transform: uppercase;
     opacity: 0;
@@ -390,7 +390,7 @@
 
 .btn-basket-fix:hover {
     font-size: 14px;
-    line-height: 1.2; /* Змінив на 1.2 для кращого відображення */
+    line-height: 1.2; 
     letter-spacing: 0.3px;
     background-color: var(--bg-color);
     color: var(--main-text-color);
@@ -420,38 +420,38 @@
 }
 
 .like-list {
-    display: flex; /* Використовуємо flexbox для вирівнювання елементів у рядок */
-    gap: 10px; /* Відстань між елементами */
-    list-style: none; /* Прибираємо маркери списку */
-    padding: 0; /* Забираємо відступи */
-    margin: 0; /* Забираємо відступи */
+    display: flex; 
+    gap: 10px; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
 }
 
 .like-list li {
     display: flex;
-    flex-direction: column; /* Вертикальне розташування вмісту кожного елементу списку */
-    align-items: center; /* Вирівнюємо по центру */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .image-like {
-    position: relative; /* Для позиціонування елементів, як-от overlay */
-    margin-bottom: 10px; /* Відступ між зображенням та текстом */
+    position: relative; 
+    margin-bottom: 10px; 
 }
 
 .text-like {
     display: flex;
-    flex-direction: column; /* Встановлює вертикальне розміщення елементів */
-    align-items: flex-start; /* Вирівнює елементи по лівому краю */
-    justify-content: flex-start; /* Вирівнює елементи зверху */
-    width: 100%; /* Забезпечує використання повної ширини контейнера */
-    text-align: left; /* Встановлює вирівнювання тексту по лівому краю */
-    margin-top: 10px; /* Відстань між текстом та зображенням */
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    width: 100%; 
+    text-align: left; 
+    margin-top: 10px; 
 }
 
 .title, .caption {
-    margin: 0; /* Видаляє додаткові відступи */
-    padding: 0; /* Видаляє додаткові внутрішні відступи */
-    text-align: left; /* Встановлює вирівнювання тексту по лівому краю */
+    margin: 0; 
+    padding: 0; 
+    text-align: left; 
 }
 
 
