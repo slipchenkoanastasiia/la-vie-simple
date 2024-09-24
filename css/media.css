@@ -1,75 +1,90 @@
+/*header */
 @media screen and (max-width: 428px) {
-    .container {
-      width: 100%;
-      padding: 0 15px;
-    }
-  
-    .burger-menu {
-      display: flex;
-    }
-  
-    .nav-list {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 90px;
-      right: 0;
-      width: 100%;
-      background-color: var(--bg-color);
-      padding: 10px 0;
-      z-index: 1000;
-    }
-  
-    .nav-item {
-      width: 100%;
-      text-align: center;
-    }
-  
-    .nav-menu {
-      display: block;
-      padding: 15px;
-      color: var(--main-text-color);
-    }
-  
-    .burger-menu.active + .nav-list {
-      display: flex;
-    }
-  
-    .icons {
-      display: none;
-    }
-  
-    .basket {
-      display: none;
-    }
+  .container {
+    width: 100%;
+    padding: 0 15px;
+    display: flex; /* Додаємо flex для вирівнювання елементів */
+    align-items: center; /* Вирівнюємо по вертикалі */
+    justify-content: space-between; /* Розподіляємо простір між елементами */
   }
-  
-  @media screen and (min-width: 768px) and (max-width: 1157px) {
-    .container {
-      width: 100%;
-      padding: 0 20px;
-    }
-  
-    .burger-menu {
-      display: none;
-    }
-  
-    .nav-list {
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    .icons, .basket {
-      display: block;
-    }
-  
-    .nav-menu {
-      font-size: 16px;
-      padding: 10px;
-    }
-  
-    .logo-name {
-      font-size: 18px;
-    }
+
+  .logo-container {
+    margin-right: auto; /* Логотип зліва */
   }
-  
+
+  .icons {
+    display: flex; /* Відображаємо іконки */
+    justify-content: center; /* Вирівнюємо іконки по центру */
+    flex-grow: 1; /* Додаємо простір для центрування іконок */
+    gap: 10px; /* Відстань між іконками */
+    margin: 0; /* Виправлено для правильного центровання */
+  }
+
+  .burger-menu {
+    display: flex;
+    margin-left: auto; /* Притискаємо бургер до правого краю */
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu {
+    display: block;
+    padding: 15px;
+    color: var(--main-text-color);
+  }
+
+  .burger-menu.active + .nav-list {
+    display: flex;
+  }
+
+  .basket {
+    display: none;
+  }
+}
+
+/* Адаптивний стиль для планшетів (768px - 1157px) */
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    display: flex; /* Додаємо flex для планшетів */
+    align-items: center; /* Вирівнюємо по вертикалі */
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icons, .basket {
+    display: block;
+  }
+
+  .nav-menu {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .logo-name {
+    font-size: 18px;
+  }
+}
