@@ -1,28 +1,65 @@
-/*header */
+/* Мобільна версія (max-width: 428px) */
 @media screen and (max-width: 428px) {
   .container {
     width: 100%;
     padding: 0 15px;
-    display: flex; /* Додаємо flex для вирівнювання елементів */
-    align-items: center; /* Вирівнюємо по вертикалі */
-    justify-content: space-between; /* Розподіляємо простір між елементами */
+    display: flex;
+    align-items: center; /* Вертикальне вирівнювання */
+    justify-content: space-between; /* Розподіл елементів */
   }
 
   .logo-container {
-    margin-right: auto; /* Логотип зліва */
+    margin-right: 10px; /* Відстань між логотипом і корзиною */
+  }
+
+  .logo-container .logo {
+    display: none; /* Сховати зображення логотипу */
   }
 
   .icons {
-    display: flex; /* Відображаємо іконки */
-    justify-content: center; /* Вирівнюємо іконки по центру */
-    flex-grow: 1; /* Додаємо простір для центрування іконок */
-    gap: 10px; /* Відстань між іконками */
-    margin: 0; /* Виправлено для правильного центровання */
+    display: none; /* Прибираємо іконки */
+  }
+
+  .basket {
+    display: flex; /* Показуємо корзину */
+    align-items: center; /* Вертикальне вирівнювання */
   }
 
   .burger-menu {
     display: flex;
-    margin-left: auto; /* Притискаємо бургер до правого краю */
+    cursor: pointer;
+    flex-direction: column; /* Впевніться, що смужки розташовані вертикально */
+    justify-content: space-between; /* Розподіл смужок */
+    width: 24px; /* Задайте ширину бургер-меню */
+    height: 16px;
+    margin-left: auto; /* Притискає бургер до правого краю */
+  }
+
+  .basket-count {
+    margin-left: 5px; /* Відстань між іконкою і кількістю товарів */
+    font-size: 14px; /* Розмір шрифту для кількості товарів */
+    color: var(--main-text-color); /* Колір тексту для кількості товарів */
+  }
+
+  .burger-menu span {
+    display: block; /* Робимо смужки блочними елементами */
+    height: 1.5px; /* Товщина смужок */
+    width: 100%; /* Ширина смужок */
+    background-color: var(--main-text-color); /* Колір смужок, змініть на потрібний */
+    transition: background-color 0.3s, transform 0.3s; 
+  }
+
+  /* Додаткові стилі для активного стану (коли меню відкрите) */
+  .burger-menu.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg); /* Першу смужку обертаємо */
+  }
+  
+  .burger-menu.active span:nth-child(2) {
+    opacity: 0; /* Сховати середню смужку */
+  }
+  
+  .burger-menu.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg); /* Третю смужку обертаємо */
   }
 
   .nav-list {
@@ -52,18 +89,74 @@
     display: flex;
   }
 
-  .basket {
-    display: none;
+  .menu-dropdown {
+    display: none; /* Сховати за замовчуванням */
+    position: absolute; /* Випадаюче меню буде позиціонуватися відносно батьківського елемента */
+    top: calc(100% - 10px); /* Розміщення під основним меню */
+    left: 0; /* Вирівнювання з лівим краєм */
+    background-color: var(--bg-color); /* Колір фону */
+    z-index: 999; /* Щоб перекривати інші елементи */
+    width: 100%; /* Ширина випадаючого меню 100% */
+    padding: 10px; /* Внутрішній відступ */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Тінь для ефекту підняття */
+  }
+  
+  .nav-item:hover .menu-dropdown {
+    display: block; /* Показати меню при наведенні */
+  }
+  
+  .menu-dropdown-item {
+    position: relative;
+    font-size: 14px; /* Розмір шрифту для елементів меню */
+    text-transform: uppercase; /* Верхній регістр */
+    color: var(--main-text-color); /* Колір тексту */
+    font-weight: 600; /* Товщина шрифту */
+    margin-bottom: 10px; /* Відстань між елементами меню */
+  }
+  
+  .menu-sub-dropdown {
+    font-size: 14px; /* Розмір шрифту для підменю */
+    color: var(--main-text-color);
+    font-family: var(--primary-font); /* Шрифт для підменю */
+    font-weight: 400; /* Товщина шрифту */
+    margin-top: 10px; /* Відстань перед підменю */
+    display: block; /* Завжди показувати підменю */
+  }
+  
+  .menu-dropdown-item a {
+    color: var(--main-text-color); /* Колір тексту для посилань */
+    text-decoration: none; /* Без підкреслення */
+    display: block; /* Перетворити посилання в блочний елемент для вертикального розташування */
+    padding: 3px 7px; /* Внутрішні відступи для зручності натискання */
+  }
+
+  .menu-dropdown-item a:hover {
+    background-color: var(--bg-hover-color); /* Колір фону при наведенні */
+    color: var(--main-brand-color); /* Колір тексту при наведенні */
+  }
+  
+  /* Встановлюємо лінії для підменю */
+  .menu-dropdown-item .menu-sub-dropdown li {
+    font-size: 12px; /* Розмір шрифту для підменю */
+    color: var(--main-text-color); /* Колір тексту для підменю */
+    font-weight: 500; /* Товщина шрифту для підменю */
+    line-height: 1.5; /* Висота рядка */
+    margin-bottom: 5px; /* Відстань між підменю */
+  }
+
+  .menu-dropdown img {
+    display: none; /* Приховати всі зображення в меню */
   }
 }
 
-/* Адаптивний стиль для планшетів (768px - 1157px) */
+/* Планшетна версія (768px - 1157px) */
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .container {
     width: 100%;
     padding: 0 20px;
-    display: flex; /* Додаємо flex для планшетів */
-    align-items: center; /* Вирівнюємо по вертикалі */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .burger-menu {
@@ -75,7 +168,7 @@
     justify-content: space-between;
   }
 
-  .icons, .basket {
+  .icons {
     display: block;
   }
 
