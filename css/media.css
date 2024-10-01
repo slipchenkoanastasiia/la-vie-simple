@@ -13,6 +13,13 @@
     padding: 0 !important; 
     margin: 0; 
     box-sizing: border-box; 
+    background-color: var(--bg-color) !important;
+    opacity: 1 !important;
+    z-index: 1000;
+  }
+
+  .container, .header {
+    background-color: var(--bg-color) !important;
   }
 
   .logo-container {
@@ -164,37 +171,158 @@
   .menu-dropdown img {
     display: none; 
   }
-}
 
-/* Планшетна версія (768px - 1157px) */
-@media screen and (min-width: 768px) and (max-width: 1157px) {
-  .container {
+
+  .slider {
     width: 100%;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: 50vh; /* Зменшена висота слайдера приблизно вдвічі */
+    overflow: hidden;
   }
 
-  .burger-menu {
+  .slides {
+    display: flex;
+  }
+
+  /* Прибираємо всі слайди, крім першого */
+  .slide {
     display: none;
   }
 
-  .nav-list {
-    display: flex;
-    justify-content: space-between;
+  .slide1 {
+    display: block; /* Залишаємо лише перший слайд */
+    height: 50vh; /* Висота 50% висоти екрану */
+    position: relative; /* Позиціонування для тексту */
   }
 
-  .icons {
-    display: block;
+  .slide1 img {
+    width: 100%;
+    height: 100%; /* Підгоняємо зображення під висоту контейнера */
+    object-fit: cover;
   }
 
-  .nav-menu {
-    font-size: 16px;
-    padding: 10px;
+  /* Прибираємо всі текстові контейнери для прихованих слайдів */
+  .slide:not(.slide1) .slide-caption-container {
+    display: none;
   }
 
-  .logo-name {
-    font-size: 18px;
-  }
+  /* Оновлення стилів для тексту на мобільній версії */
+/* Центрування тексту на слайді */
+.slide1 .slide-caption-container {
+  position: absolute;
+  top: 50%; /* Центруємо текст по вертикалі */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центруємо по вертикалі та горизонталі */
+  width: 90%; /* Зменшуємо ширину контейнера для тексту */
+  text-align: center; /* Центруємо текст всередині контейнера */
+}
+
+.caption1 {
+  font-size: 50px !important; /* Зменшений розмір шрифту */
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  color: var(--bg-color);
+  text-transform: uppercase;
+  font-weight: 400; /* Збільшена вага шрифту для видимості */
+  font-family: var(--primary-font);
+  max-width: 100%; /* Обмежуємо максимальну ширину тексту */
+  word-break: break-word; /* Дозволяємо перенос слів */
+  margin: 0 auto; /* Центруємо текст */
+  white-space: normal !important;
+}
+
+.slider-footer {
+  display: none;
+}
+
+.section-js {
+  margin-top: 30px;
+}
+
+.mm-wrapper {
+  display: flex;
+  flex-direction: column; /* Встановлюємо вертикальне вирівнювання */
+  width: 100%;
+  gap: 10px;/* Займає всю ширину контейнера */
+}
+
+.image-wrapper {
+  position: relative; /* Дозволяє абсолютне позиціювання для підпису */
+  width: 100%; /* Займає всю ширину контейнера */
+  overflow: hidden; /* Сховати частини зображення, які виходять за межі контейнера */
+}
+
+.image-wrapper img {
+  width: 100%; /* Зображення займає всю ширину контейнера */
+  height: auto; /* Висота автоматично підлаштовується, зберігаючи пропорції */
+  object-fit: cover; /* Зображення підганяється під розмір контейнера */
+}
+
+.image-caption-js {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--bg-color);
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%; /* Займає всю ширину для центрування тексту */
+}
+
+
+.section-new {
+  padding: 0; /* Прибираємо падінги */
+}
+
+.card-list {
+  flex-wrap: wrap; /* Дозволяємо обгортання */
+  justify-content: space-between; /* Вирівнювання карток */
+}
+
+.card-list li {
+  flex-basis: calc(50% - 10px); /* Дві картки поруч */
+  max-width: calc(50% - 10px); /* Максимальна ширина 50% */
+  margin-bottom: 20px; /* Відстань між картками */
+  margin-right: 10px; /* Відстань праворуч */
+}
+
+.card-list li:nth-child(2n) {
+  margin-right: 0; /* Прибираємо правий відступ у парних карток */
+}
+
+.image-container {
+  height: 240px; /* Висота картки для мобільної версії */
+}
+
+.card-list li:nth-child(n+3) {
+  display: none; /* Сховати всі картки, починаючи з третьої */
+}
+
+/* Додаємо стилі для відображення назви та ціни */
+.title {
+  font-size: 12px;
+  text-align: left; 
+  line-height: 1.1; 
+  letter-spacing: 0.2px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  font-weight: 500;
+  margin-top: 5px; /* Відстань над назвою товару */
+}
+
+.caption {
+  font-size: 14px;
+  text-align: left; 
+  line-height: 1.1; 
+  letter-spacing: 0.2px;
+  color: var(--main-text-color);
+  font-family: var(--primary-font);
+  padding-top: 5px;
+  font-weight: 700;
+}
+
 }
