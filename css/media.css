@@ -277,34 +277,69 @@
 .section-new {
   padding: 0; /* Прибираємо падінги */
 }
+.section-name {
+  display: flex; /* Включаємо Flexbox */
+  justify-content: center; /* Вирівнювання по горизонталі */
+  align-items: center; /* Вирівнювання по вертикалі */
+  height: 20px; /* Встановіть бажану висоту для контейнера */
+  padding-left: 10px; /* Залишаємо відступ зліва */
+  padding-top: 20px; /* Додайте відступ зверху для відцентровки тексту */
+}
+
+.button-container {
+  padding-right: 10px;
+}
 
 .card-list {
-  flex-wrap: wrap; /* Дозволяємо обгортання */
-  justify-content: space-between; /* Вирівнювання карток */
+  display: flex;
+  flex-direction: row; /* Горизонтальне вирівнювання карток */
+  gap: 5px; /* Проміжок між картками */
+  list-style: none; /* Прибираємо стилі списку */
+  padding: 0;
+  margin: 0;
 }
 
 .card-list li {
-  flex-basis: calc(50% - 10px); /* Дві картки поруч */
-  max-width: calc(50% - 10px); /* Максимальна ширина 50% */
-  margin-bottom: 20px; /* Відстань між картками */
-  margin-right: 10px; /* Відстань праворуч */
-}
-
-.card-list li:nth-child(2n) {
-  margin-right: 0; /* Прибираємо правий відступ у парних карток */
+  flex-basis: calc(50% - 2.5px); /* Картка займає 50% ширини контейнера з урахуванням відступу */
+  max-width: calc(50% - 2.5px); /* Максимальна ширина 50% */
+  margin-bottom: 0; /* Відстань між картками */
 }
 
 .image-container {
-  height: 240px; /* Висота картки для мобільної версії */
+  width: 198px; /* Встановлюємо ширину контейнера */
+  height: 298px; /* Встановлюємо фіксовану висоту контейнера, змініть на потрібну вам */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Для позиціонування overlay */
+  overflow: hidden; /* Приховуємо все, що виходить за межі */
+}
+
+.image-container img {
+  max-width: 100%; /* Зображення займає всю ширину контейнера */
+  max-height: 100%; /* Зображення не перевищує висоту контейнера */
+  object-fit: cover; /* Зберігає пропорції зображення */
+  width: auto; /* Дозволяє автоматичну ширину */
+  height: auto; /* Дозволяє автоматичну висоту */
+  flex-shrink: 0; /* Не дозволяємо зменшувати зображення */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 10px; /* Розташування overlay внизу */
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Напівпрозорий фон */
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px; /* Зменшено розмір шрифта для overlay */
 }
 
 .card-list li:nth-child(n+3) {
   display: none; /* Сховати всі картки, починаючи з третьої */
 }
 
-/* Додаємо стилі для відображення назви та ціни */
 .title {
-  font-size: 12px;
+  font-size: 12px; /* Зменшено розмір шрифта для назви */
   text-align: left; 
   line-height: 1.1; 
   letter-spacing: 0.2px;
@@ -315,7 +350,7 @@
 }
 
 .caption {
-  font-size: 14px;
+  font-size: 12px; /* Зменшено розмір шрифта для підпису */
   text-align: left; 
   line-height: 1.1; 
   letter-spacing: 0.2px;
@@ -325,4 +360,164 @@
   font-weight: 700;
 }
 
+.section-popular {
+  padding: 0;
 }
+
+.section-fs {
+  padding: 0;
+}
+
+
+.footer {
+  background-color: var(--main-brand-color); /* Переконайтеся, що ця змінна визначена */
+  color: var(--bg-color);
+  width: 100%;
+  padding: 20px 10px; /* Зменшено, щоб надати футеру легкий вигляд */
+  height: auto; /* Зміна висоти на автоматичну */
+  position: relative; /* Переконайтеся, що позиціонування вірне */
+  margin-top: 60px; /* Відстань від верхнього вмісту */
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column; /* Вертикальне вирівнювання на мобільних */
+  align-items: center; /* Центруємо вміст */
+}
+
+
+.footer-top, .footer-bottom {
+  display: flex;
+  flex-wrap: wrap; /* Додаємо цю властивість */
+  justify-content: space-between; /* Залишаємо для вирівнювання */
+}
+
+
+.footer-top {
+  display: flex;
+  flex-direction: column; /* Вертикальне вирівнювання на мобільних */
+  align-items: center; /* Центруємо вміст */
+  margin-bottom: 20px; /* Відстань між верхньою та нижньою частинами футера */
+}
+
+.footer-logo {
+  margin-bottom: 10px; 
+/* Відстань під логотипом */
+}
+
+.footer-info {
+  text-align: center; /* Центруємо текст */
+  color: var(--bg-color);
+  font-size: 18px; /* Зменшено шрифт для мобільних */
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.footer-subscribe {
+  width: 100%; /* Ширина 100% для мобільних */
+  margin-top: 10px; /* Відстань між інформацією та підпискою */
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column; /* Вертикальне вирівнювання для мобільних */
+  width: 100%; /* Ширина 100% для мобільних */
+}
+
+.input-wrapper input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: var(--main-brand-color);
+  color: var(--bg-color);
+  margin-bottom: 10px; /* Відстань між полем вводу та кнопкою */
+}
+
+.input-wrapper button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* Збільшено для зручності натискання */
+}
+
+.footer-social-contact {
+  display: flex;
+  flex-direction: column; /* Вертикальне вирівнювання для мобільних */
+  align-items: center; /* Центруємо вміст */
+  margin-top: 20px; /* Відстань між підпискою та соціальними контактами */
+}
+
+.footer-social ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-social ul li {
+  margin-right: 10px; /* Зменшено відстань між іконками */
+}
+
+.footer-contact {
+  text-align: center; /* Центруємо текст контакту */
+  margin-top: 10px; /* Відстань між соціальними іконками та телефоном */
+}
+
+/* Стилі для нижньої частини футера */
+.footer-bottom {
+  display: flex;
+  flex-direction: column; /* Вертикальне вирівнювання на мобільних */
+  align-items: center; /* Центруємо вміст */
+  margin-top: 20px; /* Відстань між верхньою та нижньою частинами футера */
+}
+
+.footer-menu {
+  width: 100%; /* Ширина 100% для мобільних */
+  margin-bottom: 20px; /* Відстань між меню */
+}
+
+.footer-name {
+  color: var(--bg-color);
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  text-align: center; /* Центруємо заголовок меню */
+  margin-bottom: 10px; /* Відстань під заголовком меню */
+}
+
+.footer-menu ul {
+  padding: 0;
+  list-style: none;
+  color: var(--bg-color);
+  font-size: 14px; /* Зменшено шрифт для мобільних */
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.site-info {
+  display: flex;
+  flex-direction: column; /* Вертикальне вирівнювання для мобільних */
+  align-items: center; /* Центруємо вміст */
+  margin-top: 20px; /* Відстань між нижньою частиною футера та інформацією */
+}
+
+/* Стилі для інформаційних посилань */
+.info-link {
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 0.2px;
+  color: var(--light-gray-color);
+  text-align: center; /* Центруємо текст */
+}
+
+.info-link:hover {
+  color: var(--dark-gray-color);
+}
+
+
+
+}
+
+
