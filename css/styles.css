@@ -919,21 +919,19 @@ font-weight: bold;
   background-color: var(--main-brand-color);
   color: var(--bg-color);
   width: 100%;
-  height: 428px;
+  min-height: auto;/* зміна height на min-height */
   position: relative;
-  left: 0;
   margin-top: 60px;
   overflow: hidden;
- }
- 
- .footer .container {
+}
+
+.footer .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch; /* зміна на flex-start для кращого вирівнювання */
   flex-wrap: wrap;
   padding: 0 10px;
-  margin-top: 60px;
- }
+}
  
  .footer-top,
  .footer-bottom {
@@ -944,6 +942,7 @@ font-weight: bold;
   align-items: center;
   flex-wrap: wrap;
   display: flex;
+  margin-top: 60px;
  }
  
  .footer-logo,
@@ -976,83 +975,84 @@ font-weight: bold;
  
  .footer-subscribe {
   margin-top: 10px;
-  width: 560px;
-  height: 10px;
- }
- 
- .input-wrapper {
- position: relative;
- display: flex;
- align-items: center;
- }
- 
- .input-wrapper input[type="email"] {
- flex: 1;
- padding: 10px;
- border: none;
- border-bottom: 1px solid white;
- background-color: var(--main-brand-color);
- color: var(--bg-color);
- }
- 
- .input-wrapper button {
- background: none;
- border: none;
- cursor: pointer;
- padding: 0;
- margin-left: 10px;
- color: var(--bg-color);
- }
- 
- #email::placeholder {
- font-size: 14px;
- text-align: left;
- line-height: 1.0;
- letter-spacing: 0.2px;
- color: var(--bg-color);
- font-family: var(--primary-font);
- font-weight: 500;
- }
- 
- .footer-social-contact {
- display: flex;
- align-items: center;
- margin-top: 40px; 
- gap: 300px;
- }
- 
- .icon-footer{
- fill: var(--bg-color);
- }
- 
- .footer-social ul {
- display: flex;
- list-style: none;
- padding: 0;
- margin-right: 20px; 
- }
- 
- .footer-social ul li {
- margin-right: 14px;
- }
+  width: 100%; /* Встановлюємо ширину на 100% */
+  height: auto; /* Видаляємо жорстко задану висоту */
+}
 
- .social-links {
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input[type="email"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: var(--main-brand-color);
+  color: var(--bg-color);
+}
+
+.input-wrapper button {
+  background: none;
+  border: none;
   cursor: pointer;
- }
- 
- .footer-contact p {
- color: var(--bg-color);
- font-size: 18px;
- line-height: 1.3; 
- letter-spacing: 0.5px;
- font-weight: 600;
- cursor: pointer;
- }
+  padding: 0;
+  margin-left: 10px;
+  color: var(--bg-color);
+}
+
+#email::placeholder {
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.0;
+  letter-spacing: 0.2px;
+  color: var(--bg-color);
+  font-family: var(--primary-font);
+  font-weight: 500;
+}
+
+/* Стилі для блоку з соцмережами та контактом */
+.footer-social-contact {
+  display: flex;
+  flex-direction: row; /* Розташування в одну лінію */
+  justify-content: space-between; /* Вирівнюємо контент по краях */
+  align-items: center; /* Вирівнювання по вертикалі */
+  margin-top: -10px; /* Відступ від плейсхолдера */
+  gap: 20px; /* Відстань між елементами */
+}
+
+.footer-social ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Видаляємо зайві відступи */
+}
+
+.footer-social ul li {
+  margin-right: 14px;
+}
+
+.icon-footer {
+  fill: var(--bg-color);
+}
+
+.footer-contact p {
+  color: var(--bg-color);
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
  
  .site-info {
   display: flex; 
   justify-content: flex-start; 
-  margin-top: 90px; 
+  margin-top: 80px; 
+  margin-bottom: 30px;
   gap: 20px;
 }
 
@@ -1070,14 +1070,15 @@ font-weight: bold;
   color: var(--dark-gray-color);
 }
  
- .footer-bottom {
+.footer-bottom {
   display: flex;
   flex-wrap: wrap;
-  align-self: flex-start; 
   align-items: center;
-  margin-left: 80px;
-  gap: 100px;
- }
+  margin-left: 0;
+  padding-left: 40px; 
+  gap: 20px; 
+  margin-top: -30px;
+}
  
  .footer-menu {
  width: auto; 

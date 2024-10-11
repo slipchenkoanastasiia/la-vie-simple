@@ -1,7 +1,6 @@
-/* Мобільна версія (max-width: 428px) */
 @media screen and (max-width: 428px) {
   .container {
-    width: 100%;
+    max-width: 426px;
     padding: 0 15px;
     display: flex;
     align-items: center; 
@@ -172,10 +171,9 @@
     display: none; 
   }
 
-
   .slider {
     width: 100%;
-    height: 50vh; /* Зменшена висота слайдера приблизно вдвічі */
+    height: 50vh; 
     overflow: hidden;
   }
 
@@ -183,50 +181,46 @@
     display: flex;
   }
 
-  /* Прибираємо всі слайди, крім першого */
   .slide {
     display: none;
   }
 
   .slide1 {
-    display: block; /* Залишаємо лише перший слайд */
-    height: 50vh; /* Висота 50% висоти екрану */
-    position: relative; /* Позиціонування для тексту */
+    display: block; 
+    height: 50vh; 
+    position: relative; 
   }
 
   .slide1 img {
     width: 100%;
-    height: 100%; /* Підгоняємо зображення під висоту контейнера */
+    height: 100%; 
     object-fit: cover;
   }
 
-  /* Прибираємо всі текстові контейнери для прихованих слайдів */
   .slide:not(.slide1) .slide-caption-container {
     display: none;
   }
 
-  /* Оновлення стилів для тексту на мобільній версії */
-/* Центрування тексту на слайді */
 .slide1 .slide-caption-container {
   position: absolute;
-  top: 50%; /* Центруємо текст по вертикалі */
+  top: 50%; 
   left: 50%;
-  transform: translate(-50%, -50%); /* Центруємо по вертикалі та горизонталі */
-  width: 90%; /* Зменшуємо ширину контейнера для тексту */
-  text-align: center; /* Центруємо текст всередині контейнера */
+  transform: translate(-50%, -50%); 
+  width: 90%; 
+  text-align: center; 
 }
 
 .caption1 {
-  font-size: 50px !important; /* Зменшений розмір шрифту */
+  font-size: 50px !important; 
   line-height: 1.2;
   letter-spacing: 0.2px;
   color: var(--bg-color);
   text-transform: uppercase;
-  font-weight: 400; /* Збільшена вага шрифту для видимості */
+  font-weight: 400; 
   font-family: var(--primary-font);
-  max-width: 100%; /* Обмежуємо максимальну ширину тексту */
-  word-break: break-word; /* Дозволяємо перенос слів */
-  margin: 0 auto; /* Центруємо текст */
+  max-width: 100%; 
+  word-break: break-word; 
+  margin: 0 auto; 
   white-space: normal !important;
 }
 
@@ -240,21 +234,21 @@
 
 .mm-wrapper {
   display: flex;
-  flex-direction: column; /* Встановлюємо вертикальне вирівнювання */
+  flex-direction: column; 
   width: 100%;
-  gap: 10px;/* Займає всю ширину контейнера */
+  gap: 10px;
 }
 
 .image-wrapper {
-  position: relative; /* Дозволяє абсолютне позиціювання для підпису */
-  width: 100%; /* Займає всю ширину контейнера */
-  overflow: hidden; /* Сховати частини зображення, які виходять за межі контейнера */
+  position: relative; 
+  width: 100%; 
+  overflow: hidden; 
 }
 
 .image-wrapper img {
-  width: 100%; /* Зображення займає всю ширину контейнера */
-  height: auto; /* Висота автоматично підлаштовується, зберігаючи пропорції */
-  object-fit: cover; /* Зображення підганяється під розмір контейнера */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
 }
 
 .image-caption-js {
@@ -270,20 +264,19 @@
   font-family: var(--primary-font);
   text-transform: uppercase;
   text-align: center;
-  width: 100%; /* Займає всю ширину для центрування тексту */
+  width: 100%; 
 }
-
 
 .section-new {
-  padding: 0; /* Прибираємо падінги */
+  padding: 0; 
 }
 .section-name {
-  display: flex; /* Включаємо Flexbox */
-  justify-content: center; /* Вирівнювання по горизонталі */
-  align-items: center; /* Вирівнювання по вертикалі */
-  height: 20px; /* Встановіть бажану висоту для контейнера */
-  padding-left: 10px; /* Залишаємо відступ зліва */
-  padding-top: 20px; /* Додайте відступ зверху для відцентровки тексту */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 20px; 
+  padding-left: 10px; 
+  padding-top: 20px; 
 }
 
 .button-container {
@@ -292,65 +285,65 @@
 
 .card-list {
   display: flex;
-  flex-direction: row; /* Горизонтальне вирівнювання карток */
-  gap: 5px; /* Проміжок між картками */
-  list-style: none; /* Прибираємо стилі списку */
+  flex-direction: row; 
+  gap: 5px; 
+  list-style: none; 
   padding: 0;
   margin: 0;
 }
 
 .card-list li {
-  flex-basis: calc(50% - 2.5px); /* Картка займає 50% ширини контейнера з урахуванням відступу */
-  max-width: calc(50% - 2.5px); /* Максимальна ширина 50% */
-  margin-bottom: 0; /* Відстань між картками */
+  flex-basis: calc(50% - 2.5px); 
+  max-width: calc(50% - 2.5px); 
+  margin-bottom: 0; 
 }
 
 .image-container {
-  width: 198px; /* Встановлюємо ширину контейнера */
-  height: 298px; /* Встановлюємо фіксовану висоту контейнера, змініть на потрібну вам */
+  width: 198px; 
+  height: 298px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* Для позиціонування overlay */
-  overflow: hidden; /* Приховуємо все, що виходить за межі */
+  position: relative; 
+  overflow: hidden; 
 }
 
 .image-container img {
-  max-width: 100%; /* Зображення займає всю ширину контейнера */
-  max-height: 100%; /* Зображення не перевищує висоту контейнера */
-  object-fit: cover; /* Зберігає пропорції зображення */
-  width: auto; /* Дозволяє автоматичну ширину */
-  height: auto; /* Дозволяє автоматичну висоту */
-  flex-shrink: 0; /* Не дозволяємо зменшувати зображення */
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: cover; 
+  width: auto; 
+  height: auto; 
+  flex-shrink: 0; 
 }
 
 .overlay {
   position: absolute;
-  bottom: 10px; /* Розташування overlay внизу */
+  bottom: 10px; 
   left: 10px;
-  background-color: rgba(0, 0, 0, 0.6); /* Напівпрозорий фон */
+  background-color: rgba(0, 0, 0, 0.6); 
   color: #fff;
   padding: 5px 10px;
-  font-size: 12px; /* Зменшено розмір шрифта для overlay */
+  font-size: 12px; 
 }
 
 .card-list li:nth-child(n+3) {
-  display: none; /* Сховати всі картки, починаючи з третьої */
+  display: none; 
 }
 
 .title {
-  font-size: 12px; /* Зменшено розмір шрифта для назви */
+  font-size: 12px; 
   text-align: left; 
   line-height: 1.1; 
   letter-spacing: 0.2px;
   color: var(--main-text-color);
   font-family: var(--primary-font);
   font-weight: 500;
-  margin-top: 5px; /* Відстань над назвою товару */
+  margin-top: 5px; 
 }
 
 .caption {
-  font-size: 12px; /* Зменшено розмір шрифта для підпису */
+  font-size: 12px; 
   text-align: left; 
   line-height: 1.1; 
   letter-spacing: 0.2px;
@@ -368,156 +361,102 @@
   padding: 0;
 }
 
-
 .footer {
-  background-color: var(--main-brand-color); /* Переконайтеся, що ця змінна визначена */
-  color: var(--bg-color);
-  width: 100%;
-  padding: 20px 10px; /* Зменшено, щоб надати футеру легкий вигляд */
-  height: auto; /* Зміна висоти на автоматичну */
-  position: relative; /* Переконайтеся, що позиціонування вірне */
-  margin-top: 60px; /* Відстань від верхнього вмісту */
+  position: relative;
+  z-index: 10;
+  min-height: 100px;
+  padding: 20px;
+  box-sizing: border-box; 
 }
 
 .footer .container {
   display: flex;
-  flex-direction: column; /* Вертикальне вирівнювання на мобільних */
-  align-items: center; /* Центруємо вміст */
+  flex-direction: column;
+  align-items: center; 
+  padding: 10px;
+  background-color: var(--main-brand-color) !important;
 }
-
-
-.footer-top, .footer-bottom {
-  display: flex;
-  flex-wrap: wrap; /* Додаємо цю властивість */
-  justify-content: space-between; /* Залишаємо для вирівнювання */
-}
-
 
 .footer-top {
   display: flex;
-  flex-direction: column; /* Вертикальне вирівнювання на мобільних */
-  align-items: center; /* Центруємо вміст */
-  margin-bottom: 20px; /* Відстань між верхньою та нижньою частинами футера */
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .footer-logo {
-  margin-bottom: 10px; 
-/* Відстань під логотипом */
+  margin-bottom: 20px;
 }
 
 .footer-info {
-  text-align: center; /* Центруємо текст */
-  color: var(--bg-color);
-  font-size: 18px; /* Зменшено шрифт для мобільних */
-  line-height: 1.2;
-  letter-spacing: 0.5px;
-  font-weight: 600;
+  display: block;
+  text-align: center;
+  width: 100%; 
+  font-size: 14px; 
+  margin-top: 10px; 
 }
 
 .footer-subscribe {
-  width: 100%; /* Ширина 100% для мобільних */
-  margin-top: 10px; /* Відстань між інформацією та підпискою */
-}
-
-.input-wrapper {
-  display: flex;
-  flex-direction: column; /* Вертикальне вирівнювання для мобільних */
-  width: 100%; /* Ширина 100% для мобільних */
-}
-
-.input-wrapper input[type="email"] {
-  padding: 10px;
-  border: none;
-  border-bottom: 1px solid white;
-  background-color: var(--main-brand-color);
-  color: var(--bg-color);
-  margin-bottom: 10px; /* Відстань між полем вводу та кнопкою */
-}
-
-.input-wrapper button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px; /* Збільшено для зручності натискання */
+  width: 100%; 
+  margin-bottom: 30px;
+  margin-top: -15px;
 }
 
 .footer-social-contact {
-  display: flex;
-  flex-direction: column; /* Вертикальне вирівнювання для мобільних */
-  align-items: center; /* Центруємо вміст */
-  margin-top: 20px; /* Відстань між підпискою та соціальними контактами */
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px; 
 }
 
 .footer-social ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-}
-
-.footer-social ul li {
-  margin-right: 10px; /* Зменшено відстань між іконками */
+  justify-content: center;
 }
 
 .footer-contact {
-  text-align: center; /* Центруємо текст контакту */
-  margin-top: 10px; /* Відстань між соціальними іконками та телефоном */
+  text-align: center;
 }
 
-/* Стилі для нижньої частини футера */
 .footer-bottom {
-  display: flex;
-  flex-direction: column; /* Вертикальне вирівнювання на мобільних */
-  align-items: center; /* Центруємо вміст */
-  margin-top: 20px; /* Відстань між верхньою та нижньою частинами футера */
+  flex-direction: row; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin-top: 50px;
 }
 
 .footer-menu {
-  width: 100%; /* Ширина 100% для мобільних */
-  margin-bottom: 20px; /* Відстань між меню */
+text-align: center;
 }
 
 .footer-name {
-  color: var(--bg-color);
-  font-size: 18px;
-  line-height: 1.7;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  text-align: center; /* Центруємо заголовок меню */
-  margin-bottom: 10px; /* Відстань під заголовком меню */
+  font-size: 14px;
+margin-bottom: 10px;
 }
 
-.footer-menu ul {
-  padding: 0;
-  list-style: none;
-  color: var(--bg-color);
-  font-size: 14px; /* Зменшено шрифт для мобільних */
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-  font-weight: 500;
+.site-info .info-link {
+  display: none;
 }
 
-.site-info {
-  display: flex;
-  flex-direction: column; /* Вертикальне вирівнювання для мобільних */
-  align-items: center; /* Центруємо вміст */
-  margin-top: 20px; /* Відстань між нижньою частиною футера та інформацією */
+.site-info .info-link:nth-of-type(1) {
+  display: block; 
 }
 
-/* Стилі для інформаційних посилань */
-.info-link {
-  font-size: 12px;
-  line-height: 1.1;
-  letter-spacing: 0.2px;
-  color: var(--light-gray-color);
-  text-align: center; /* Центруємо текст */
+.footer svg {
+  max-width: 100%; 
+  height: auto;
 }
-
-.info-link:hover {
-  color: var(--dark-gray-color);
-}
-
-
 
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+      max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+      max-width: 1158px;
+  }
+}
 
