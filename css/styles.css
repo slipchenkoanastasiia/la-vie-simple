@@ -919,7 +919,7 @@ font-weight: bold;
   background-color: var(--main-brand-color);
   color: var(--bg-color);
   width: 100%;
-  min-height: auto;/* зміна height на min-height */
+  min-height: auto;
   position: relative;
   margin-top: 60px;
   overflow: hidden;
@@ -928,7 +928,7 @@ font-weight: bold;
 .footer .container {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* зміна на flex-start для кращого вирівнювання */
+  align-items: stretch; 
   flex-wrap: wrap;
   padding: 0 10px;
 }
@@ -942,7 +942,7 @@ font-weight: bold;
   align-items: center;
   flex-wrap: wrap;
   display: flex;
-  margin-top: 60px;
+  margin-top: 50px;
  }
  
  .footer-logo,
@@ -975,8 +975,8 @@ font-weight: bold;
  
  .footer-subscribe {
   margin-top: 10px;
-  width: 100%; /* Встановлюємо ширину на 100% */
-  height: auto; /* Видаляємо жорстко задану висоту */
+  width: 100%; 
+  height: auto; 
 }
 
 .input-wrapper {
@@ -1013,21 +1013,20 @@ font-weight: bold;
   font-weight: 500;
 }
 
-/* Стилі для блоку з соцмережами та контактом */
 .footer-social-contact {
   display: flex;
-  flex-direction: row; /* Розташування в одну лінію */
-  justify-content: space-between; /* Вирівнюємо контент по краях */
-  align-items: center; /* Вирівнювання по вертикалі */
-  margin-top: -10px; /* Відступ від плейсхолдера */
-  gap: 20px; /* Відстань між елементами */
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: -10px; 
+  gap: 20px; 
 }
 
 .footer-social ul {
   display: flex;
   list-style: none;
   padding: 0;
-  margin: 0; /* Видаляємо зайві відступи */
+  margin: 0; 
 }
 
 .footer-social ul li {

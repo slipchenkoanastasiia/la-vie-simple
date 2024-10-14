@@ -448,15 +448,140 @@ margin-bottom: 10px;
 
 }
 
+
 @media screen and (min-width: 768px) {
   .container {
-      max-width: 768px;
-  }
+    max-width: 768px;
+}
+  .header {
+    height: 70px; 
 }
 
-@media screen and (min-width: 1158px) {
-  .container {
-      max-width: 1158px;
-  }
+  .header .container {
+    height: 70px; 
 }
 
+  .logo-container {
+    display: flex; 
+    align-items: center; 
+    margin-right: 20px; 
+}
+  
+  .logo {
+    margin-right: 10px; 
+}
+  
+  .logo-name {
+    font-size: 16px; 
+    white-space: nowrap; 
+    margin-right: 10px; 
+}
+
+  .nav-list {
+    gap: 5px; 
+}
+
+  .nav-menu {
+    font-size: 12px; 
+    padding: 12px; 
+}
+
+  .nav-menu-link {
+    font-size: 12px; 
+}
+
+  .icons svg, .basket svg {
+    width: 17px; 
+    height: 17px;
+}
+
+  .basket-count {
+    font-size: 12px; 
+}
+
+  .nav-icons {
+    gap: 10px; 
+}
+
+  .toast {
+    font-size: 12px; 
+}
+
+  .link-icon svg {
+    width: 14px;  
+    height: 14px; 
+}
+
+  .card-list li:nth-child(n+4) {
+    display: none; 
+}
+
+  .slide1 .caption1 {
+    font-size: 60px;
+}
+
+  .slide2 .caption2 {
+    font-size: 30px;
+}
+
+  .slide3 .caption3 {
+    font-size: 60px;
+}
+
+  .slide4 .caption4 {
+    font-size: 30px;
+}
+
+  .slide5 .caption5 {
+    font-size: 60px;
+}
+
+  .image-caption-js {
+
+    font-size: 35px;
+    line-height: 1.0;
+}
+
+  .footer-info {
+    width: 50%;
+    color: var(--bg-color);
+    font-size: 18px;
+    line-height: 1.1; 
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-family: var(--primary-font);
+}
+
+  .footer-bottom {
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding-left: 110px;
+    margin-top: 30px; 
+}
+  
+  .footer-menu {
+    width: 100%; 
+    margin-bottom: 10px; 
+}
+  
+  .footer-menu:first-child {
+    margin-right: 0; 
+}
+
+  .footer-name {
+    margin-bottom: 10px;
+}
+
+  .footer-top {
+    margin-top: 20px;
+}
+
+  .footer-subscribe {
+    margin-top: -60px;
+} 
+
+  .site-info {
+    margin-top: 50px; 
+} 
+
+}
