@@ -1,4 +1,5 @@
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 768px) {
+  /* Головна сторінка */
   .container {
     max-width: 426px;
     padding: 0 15px;
@@ -446,10 +447,137 @@ margin-bottom: 10px;
   height: auto;
 }
 
+/* Спідниці максі */
+
+.menu-filters {
+  margin-top: 0; 
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc; 
+  display: flex;
+  flex-direction: column;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+}
+
+.right-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px; 
+}
+
+.right-content .sort {
+  display: flex; 
+  align-items: center; 
+}
+
+.filters {
+  display: none; 
+  margin-bottom: 20px; 
+}
+
+.product-item {
+  flex: 0 0 calc(50% - 10px); 
+  margin-bottom: 10px;
+}
+
+.product-item img {
+  width: 100%; 
+  height: auto;
+}
+
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.right-content .sort label {
+  font-size: 12px;
+  margin-right: 10px; 
+}
+
+.right-content .sort select {
+  width: auto;
+  height: 30px;
+}
+
+.show-filters-btn {
+  margin-top: 10px; 
+}
+
+.price-buttons {
+  flex-direction: column; 
+}
+
+.price-buttons button {
+  width: 100%; 
+  margin-bottom: 10px;
+}
+
+#show-more-btn {
+  width: 100%; 
+  margin-top: 20px;
+}
+
+.left-content h1 {
+  display: none;
+}
+
+.sort {
+  position: relative; 
+}
+
+.custom-select {
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  padding: 10px 0; 
+  border: none;
+  background-color: transparent; 
+  transition: background-color 0.2s; 
+  justify-content: flex-start;
+}
+
+.arrow-icon {
+  margin-left: 2px; 
+  transition: transform 0.2s; 
+}
+
+#sort {
+  position: absolute; 
+  top: 100%; 
+  left: 0; 
+  right: 0;
+  background-color: #fff; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  z-index: 1000; 
+  display: none; 
+}
+
+#sort.show {
+  display: block; 
+}
+
+.rotate {
+  transform: rotate(180deg); 
+}
+
+#sort option {
+  padding: 10px; 
+  cursor: pointer; 
+}
+
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .container {
     max-width: 768px;
 }

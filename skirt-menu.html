@@ -34,6 +34,11 @@
           <img src="./img/logo-heder.jpg" alt="Логотип La Vie" width="31" height="31" class="logo">
           <a href="./index.html" class="logo-name link">La Vie</a>
         </div>
+        <div class="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <ul class="nav-list list">
           <li class="nav-item">
             <a class="nav-menu link" href="#">Каталог</a>
@@ -53,6 +58,7 @@
                   <img src="./img/MaxiMidi/shirt-2x.jpg" alt="Блузы" class="menu-icon">
                   Блузы
                 </a>
+                
                 <ul class="menu-sub-dropdown">
                   <li><a href="#">Классические</a></li>
                   <li><a href="#">На торжество</a></li>
@@ -98,7 +104,7 @@
             </a>
           </li>
           <li class="link">
-            <a href="./search.html" class="link-icon">
+            <a href="./search.html" class="link-icon link-serch">
               <svg class="custom-icon" width="17" height="17">
                 <use href="./img/icons.svg#icon-search"></use>
               </svg>
@@ -127,6 +133,16 @@
       </div>     
     </div>
   </header>
+
+  <script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navList = document.querySelector('.nav-list');
+  
+    burgerMenu.addEventListener('click', () => {
+      burgerMenu.classList.toggle('active');
+      navList.classList.toggle('active');
+    });
+  </script>
     
       <main>
         <div class="menu-filters container">
@@ -138,18 +154,19 @@
                   <div class="sort">
                     <label for="sort">Сортировать:</label>
                     <div class="custom-select">
-                        <select id="sort" name="sort">
+                        <select id="sort" class="hidden" name="sort">
                             <option value="default">по умолчанию</option>
                             <option value="price">по цене</option>
                             <option value="popularity">по популярности</option>
                         </select>
-                        <svg width="17" height="17" class="arrow-icon">
+                        <svg width="17" height="17" class="arrow-icon" id="sort-arrow">
                             <use href="./img/icons.svg#icon-arrow-down"></use>
                         </svg>
                     </div>
                 </div>                
                 </div>
             </div>
+            <button class="show-filters-btn" onclick="toggleFilters()">Показать фильтры</button>
             <div class="content">
                 <div class="filters">
                     <h2>Юбки макси</h2>
@@ -412,6 +429,22 @@
             </div>
         </div>
       </div>      
+
+      <script>
+        function toggleFilters() {
+          document.querySelector('.filters').classList.toggle('active');
+        }
+      </script>
+   <script>
+const sortHeader = document.querySelector('.custom-select'); // Змінено на клас .custom-select
+const sortOptions = document.getElementById('sort');
+const sortArrow = document.getElementById('sort-arrow');
+
+sortHeader.addEventListener('click', () => {
+    sortOptions.classList.toggle('show'); // Додає або видаляє клас show
+    sortArrow.classList.toggle('rotate'); // Поворот стрілки
+});
+</script>
 
 <script src="./js/modal.js"></script>
 <script src="./js/bundle.js"></script>
