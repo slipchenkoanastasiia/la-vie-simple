@@ -226,7 +226,7 @@
                                 <button type="button" onclick="setPrice(25000, Infinity)">от 25 000 тг</button>
                             </div>
                         </div>
-                        <button type="submit">Применить</button>
+                        <button class="apply-filters-btn" type="submit">Применить</button>
                     </form>
                 </div>
         
@@ -430,20 +430,11 @@
         </div>
       </div>      
 
-      <script>
-        function toggleFilters() {
-          document.querySelector('.filters').classList.toggle('active');
-        }
-      </script>
-   <script>
-const sortHeader = document.querySelector('.custom-select'); // Змінено на клас .custom-select
-const sortOptions = document.getElementById('sort');
-const sortArrow = document.getElementById('sort-arrow');
-
-sortHeader.addEventListener('click', () => {
-    sortOptions.classList.toggle('show'); // Додає або видаляє клас show
-    sortArrow.classList.toggle('rotate'); // Поворот стрілки
-});
+<script>
+    function toggleFilters() {
+    const filters = document.querySelector('.filters');
+    filters.classList.toggle('show-filters');
+    }
 </script>
 
 <script src="./js/modal.js"></script>
