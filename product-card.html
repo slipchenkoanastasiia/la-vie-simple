@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="./css/pr-card.css">
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/skirt-menu.css">
@@ -33,6 +34,11 @@
           <img src="./img/logo-heder.jpg" alt="Логотип La Vie" width="31" height="31" class="logo">
           <a href="./index.html" class="logo-name link">La Vie</a>
         </div>
+        <div class="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <ul class="nav-list list">
           <li class="nav-item">
             <a class="nav-menu link" href="#">Каталог</a>
@@ -52,6 +58,7 @@
                   <img src="./img/MaxiMidi/shirt-2x.jpg" alt="Блузы" class="menu-icon">
                   Блузы
                 </a>
+                
                 <ul class="menu-sub-dropdown">
                   <li><a href="#">Классические</a></li>
                   <li><a href="#">На торжество</a></li>
@@ -97,7 +104,7 @@
             </a>
           </li>
           <li class="link">
-            <a href="./search.html" class="link-icon">
+            <a href="./search.html" class="link-icon link-serch">
               <svg class="custom-icon" width="17" height="17">
                 <use href="./img/icons.svg#icon-search"></use>
               </svg>
@@ -126,6 +133,17 @@
       </div>     
     </div>
   </header>
+
+  <script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navList = document.querySelector('.nav-list');
+  
+    burgerMenu.addEventListener('click', () => {
+      burgerMenu.classList.toggle('active');
+      navList.classList.toggle('active');
+    });
+  </script>
+    
 
 <main>
 <div class="product-card container">
